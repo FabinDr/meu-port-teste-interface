@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabio Duarte - Analista de Dados</title>
+    <meta name="description"
+        content="Portfólio de Fabio Duarte - Analista de Dados especializado em transformar dados em insights valiosos">
+    <meta name="keywords" content="analista de dados, python, sql, power bi, machine learning, data science">
+    <meta name="author" content="Fabio Duarte">
+    <meta property="og:title" content="Fabio Duarte - Analista de Dados">
+    <meta property="og:description" content="Especialista em transformar dados complexos em insights estratégicos">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fabioduarte.dev">
+    <meta property="og:image" content="perfil-img.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://fabioduarte.vercel.app">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/css/projetos.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="./assets/img/logo-02.svg">
+    <link rel="apple-touch-icon" href="./assets/img/logo-02.svg">
+    <meta name="theme-color" content="#00d4ff">
+</head>
+
+<body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img class="img-logo" src="./assets/img/logo-02.svg" alt="Logo">
+                <a href="#home" class="logo">Fabio <span>Duarte</span></a>
+            </div>
+
+            <nav class="navbar">
+                <a href="#home" class="nav-link active" data-translate="home">Home</a>
+                <a href="#about" class="nav-link" data-translate="about">Sobre</a>
+                <a href="#experience" class="nav-link" data-translate="experience">Experiência</a>
+                <a href="#skills" class="nav-link" data-translate="skills">Habilidades</a>
+                <a href="#projects" class="nav-link" data-translate="projects">Projetos</a>
+                <a href="#contact" class="nav-link" data-translate="contact">Contato</a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <!-- <span class="sr-only">Menu</span> -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="accessibility-controls">
+        <button class="accessibility-btn theme-toggle" aria-label="Alternar tema">
+            <i class='bx bx-sun'></i>
+        </button>
+        <button class="accessibility-btn lang-toggle" aria-label="Alterar idioma">
+            <span class="lang-text">EN</span>
+        </button>
+    </div>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title hero-title-main">
+                        Fabio <span class="highlight">Duarte</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <span class="typing-text"></span>
+                        <span class="cursor-blink">|</span>
+                    </div>
+                    <p class="hero-description" data-translate="heroDescription">
+                        Especialista em transformar dados complexos em insights estratégicos que impulsionam decisões de
+                        negócio e geram valor real para organizações.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span data-translate="viewProjects">Ver Projetos</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span data-translate="getInTouch">Entre em Contato</span>
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/fabioduarte-ic/" target="_blank" class="social-link"
+                            aria-label="LinkedIn">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://github.com/FabinDr" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="mailto:fbduarte.ic@gmail.com" class="social-link" aria-label="Email">
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <img src="./assets/img/img-perfil.png" alt="Fabio Duarte">
+                            <div class="profile-glow"></div>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-icon" style="--delay: 0s">
+                                <i class='bx bx-data'></i>
+                            </div>
+                            <div class="floating-icon" style="--delay: 1s">
+                                <i class='bx bx-bar-chart-alt-2'></i>
+                            </div>
+                            <div class="floating-icon" style="--delay: 2s">
+                                <i class='bx bx-brain'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span data-translate="scroll">Scroll</span>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <!-- <span class="section-tag" data-translate="aboutTag">Sobre mim</span> -->
+                    <h2 class="section-title" data-translate="aboutTitle">Quem sou eu</h2>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-intro" data-translate="aboutIntro">
+                            Sou um entusiasta em dados apaixonado por descobrir padrões ocultos e transformar
+                            informações
+                            brutas em estratégias de negócio eficazes.
+                        </p>
+                        <p data-translate="aboutText1">
+                            Sou um profissional dedicado, em constante busca por novos desafios e aprendizados, sempre
+                            focado em gerar insights que causem impacto real e sustentável. Venho me aprofundando nos
+                            estudos de Análise de Dados com Python e SQL, além de desenvolver habilidades em Analytics
+                            Engineer. Meu intuito é evoluir profissionalmente e aperfeiçoar continuamente meus
+                            conhecimentos, unindo prática e teoria para entregar resultados de excelência.
+                        </p>
+                        <p data-translate="aboutText2">
+                            Minha abordagem interdisciplinar me permite conectar dados, tecnologia e negócios de forma
+                            única, sempre buscando insights que impulsionem o crescimento e a inovação.
+                        </p>
+
+                        <div class="about-skills">
+                            <h3 data-translate="mainSkills">Principais Competências</h3>
+                            <div class="skills-list">
+                                <div class="skill-tag" data-translate="dataAnalysis">Análise de Dados</div>
+                                <div class="skill-tag" data-translate="dataVisualization">Visualização de Dados</div>
+                                <div class="skill-tag" data-translate="appliedStatistics">Estatística Aplicada</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-section" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <!-- <span class="section-tag" data-translate="experienceTag">Trajetória</span> -->
+                    <h2 class="section-title" data-translate="experienceTitle">Experiência Profissional</h2>
+                </div>
+
+                <div class="experience-grid">
+                    <div class="experience-card" data-aos="fade-up">
+                        <div class="experience-header">
+                            <div class="experience-icon">
+                                <i class='bx bx-data'></i>
+                            </div>
+                            <div class="experience-info">
+                                <h3 data-translate="experienceh3">Bolsista - Análise de Dados</h3>
+                                <p class="experience-company">JOVEM TECH - Pulse | Porto do Itaqui | Fapema</p>
+                                <span class="experience-date">Maio 2025 - Present</span>
+                            </div>
+                        </div>
+                        <div class="experience-description">
+                            <p data-translate="experienceDescripton">Atuo como bolsista com foco em Análise de Dados,
+                                desenvolvendo habilidades práticas em
+                                SQL (consultas simples e intermediárias), Excel, Python (Pandas e NumPy) e Power Bi.
+                            </p>
+                            <ul>
+                                <li data-translate="experienceCont1">
+                                    Realizo a coleta, organização e análise de dados para apoiar a tomada de decisões
+                                    estratégicas.
+                                </li>
+                                <li data-translate="experienceCont2">
+                                    Transformo dados brutos em insights relevantes, contribuindo com relatórios e
+                                    visualizações que agregam valor ao negócio.
+                                </li>
+                                <li data-translate="experienceCont3">
+                                    Tenho evoluído na criação de pipelines de dados e estruturação de análises
+                                    consistentes</li>
+                            </ul>
+                        </div>
+                        <div class="experience-skills">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                            <span>Excel</span>
+                            <span>Análise Estatística</span>
+                            <span>Séries Temporais</span>
+                        </div>
+                    </div>
+
+                    <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="experience-header">
+                            <div class="experience-icon">
+                                <i class='bx bx-code-alt'></i>
+                            </div>
+                            <div class="experience-info">
+                                <h3 data-translate="experienceTitleSeng">Bolsista Back-end - Programa Trilhas</h3>
+                                <p class="experience-company" data-translate="experienceCompanyTrilhas">Inova Maranhão -
+                                    SECTI-MA</p>
+                                <span class="experience-date" data-translate="experienceDateTrilhas">2024</span>
+                            </div>
+                        </div>
+                        <div class="experience-description">
+                            <p data-translate="experienceDescriptonTrilhas">Especialização em desenvolvimento Back-end
+                                com Node.js através do programa Trilhas, uma
+                                iniciativa da Secretaria de Ciência, Tecnologia e Inovação do Estado do Maranhão.</p>
+                            <ul>
+                                <li data-translate="experienceliTrilhas1">Desenvolvimento de APIs RESTful com Node.js e
+                                    Express</li>
+                                <li data-translate="experienceliTrilhas2">Integração com bancos de dados relacionais e
+                                    não-relacionais</li>
+                                <li data-translate="experienceliTrilhas3">Implementação de autenticação e autorização
+                                </li>
+                                <li data-translate="experienceliTrilhas4">Práticas de desenvolvimento ágil e
+                                    versionamento de código</li>
+                            </ul>
+                        </div>
+                        <div class="experience-skills">
+                            <span>Node.js</span>
+                            <span>JavaScript</span>
+                            <span>APIs REST</span>
+                            <span>Banco de Dados</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <!-- <span class="section-tag" data-translate="educationTag">Formação</span> -->
+                    <h2 class="section-title" data-translate="educationTitle">Formação Acadêmica</h2>
+                    <!-- <p class="section-description" data-translate="educationDescription">
+                        Educação não é o aprendizado de fatos, mas o treinamento da mente para pensar.
+                    </p> -->
+                </div>
+
+                <div class="education-grid">
+                    <div class="education-card" data-aos="fade-up">
+                        <div class="education-image">
+                            <img src="./assets/img/ufma.jpeg" alt="UFMA">
+                        </div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <h3 data-translate="educationtitle">Bacharelado interdisciplinar em Ciência e
+                                    Tecnologia</h3>
+                                <p class="education-institution" data-translate="educationInstitution">Universidade
+                                    Federal do Maranhão</p>
+                                <span class="education-period" data-translate="educationPeriod">2023 - Presente |
+                                    Cursando</span>
+                            </div>
+                            <div class="education-description">
+                                <p data-translate="educationOverview">Formação interdisciplinar que combina
+                                    conhecimentos técnicos e científicos,
+                                    preparando profissionais para atuar em diversas áreas da tecnologia e inovação.</p>
+                                <h4 data-translate="educationSubjects">Principais disciplinas e competências:</h4>
+                                <ul>
+                                    <li><strong data-translate="educationDataScienceTitle">Ciência de Dados:</strong>
+                                        <span data-translate="educationDataScience">Análise estatística, Visualização de
+                                            dados e
+                                            machine learning</span>
+                                    </li>
+                                    <li><strong data-translate="educationAlgorithmsTitle">Algoritmos e
+                                            Programação:</strong> <span data-translate="educationAlgorithms">Fundamentos
+                                            da Computação e
+                                            Estruturas de dados</span></li>
+                                    <li><strong data-translate="educationMathTitle">Matemática Aplicada:</strong> <span
+                                            data-translate="educationMath">Álgebra Linear, Cálculo, Probabilidade e
+                                            Estatística</span></li>
+                                    <li><strong data-translate="educationSoftwareTitle">Engenharia de Software:</strong>
+                                        <span data-translate="educationSoftware">Metodologias ágeis, arquitetura de
+                                            sistemas</span>
+                                    </li>
+                                    <li><strong data-translate="educationManagementTitle">Administração:</strong> <span
+                                            data-translate="educationManagement">Gestão de projetos, empreendedorismo e
+                                            inovação</span>
+                                    </li>
+                                    <li><strong data-translate="educationPhysicsTitle">Física e Química:</strong> <span
+                                            data-translate="educationPhysics">Fundamentos científicos para aplicações
+                                            tecnológicas</span></li>
+                                </ul>
+                                <!-- <p class="education-note">Preparação para especialização em Engenharia da Computação com
+                                    foco em análise de dados e desenvolvimento de software.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <!-- <span class="section-tag" data-translate="skillsTag">Tecnologias</span> -->
+                    <h2 class="section-title" data-translate="skillsTitle">Minhas Habilidades</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-category" data-category="data-analysis">
+                        <div class="category-header">
+                            <i class='bx bx-data'></i>
+                            <h3 data-translate="dataAnalysis">Análise de Dados</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class='bx bxl-python'></i>
+                                <div class="skill-info">
+                                    <div class="skill-name">Python</div>
+                                    <div class="skill-description" data-translate="pythonLibraries">Pandas, NumPy,
+                                        Matplotlib</div>
+                                </div>
+                                <div class="skill-level" data-level="90"></div>
+                            </div>
+                            <div class="skill-item">
+                                <i class='bx bx-data'></i>
+                                <div class="skill-info">
+                                    <div class="skill-name">SQL</div>
+                                    <div class="skill-description" data-translate="databaseSystems">SQLite, MySQL
+                                    </div>
+                                </div>
+                                <div class="skill-level" data-level="85"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-category="visualization">
+                        <div class="category-header">
+                            <i class='bx bx-bar-chart-alt-2'></i>
+                            <h3 data-translate="dataVisualization">Visualização de Dados</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class='bx bx-bar-chart-alt-2'></i>
+                                <div class="skill-info">
+                                    <div class="skill-name">Power BI</div>
+                                    <div class="skill-description" data-translate="interactiveDashboards">Dashboards
+                                        interativos</div>
+                                </div>
+                                <div class="skill-level" data-level="80"></div>
+                            </div>
+                            <div class="skill-item">
+                                <i class='bx bx-line-chart'></i>
+                                <div class="skill-info">
+                                    <div class="skill-name">Matplotlib</div>
+                                    <div class="skill-description" data-translate="chartsVisualizations">Gráficos e
+                                        visualizações</div>
+                                </div>
+                                <div class="skill-level" data-level="80"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="skill-category" data-category="statistics">
+                        <div class="category-header">
+                            <i class='bx bx-math'></i>
+                            <h3>Estatística Aplicada</h3>
+                        </div>
+
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class='bx bx-math'></i>
+                                <div class="skill-info">
+                                    <div class="skill-name">Estatística Descritiva</div>
+                                    <div class="skill-description">Análise exploratória</div>
+                                </div>
+                                <div class="skill-level" data-level="85"></div>
+                            </div>
+                            <div class="skill-item">
+                                <i class='bx bx-trending-up'></i>
+                                <div class="skill-info">
+                                    <div class="skill-name">Análise de Tendências</div>
+                                    <div class="skill-description">Séries temporais</div>
+                                </div>
+                                <div class="skill-level" data-level="80"></div>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <!-- <span class="section-tag" data-translate="projectsTag">Portfolio</span> -->
+                    <h2 class="section-title" data-translate="projectsTitle">Meus Projetos</h2>
+                    <p class="section-description" data-translate="projectsDescription">
+                        Explore alguns dos meus trabalhos mais recentes em análise de dados,
+                        machine learning e desenvolvimento de soluções inovadoras.
+                    </p>
+                </div>
+
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all" data-translate="all">Todos</button>
+                    <button class="filter-btn" data-filter="data-analysis" data-translate="dataAnalysisFilter">Análise
+                        de Dados</button>
+                    <button class="filter-btn" data-filter="machine-learning"
+                        data-translate="machineLearningFilter">Machine Learning</button>
+                    <button class="filter-btn" data-filter="sql" data-translate="sql">SQL</button>
+                    <button class="filter-btn" data-filter="dashboard" data-translate="dashboard">Dashboards</button>
+                </div>
+
+                <div class="projects-grid">
+
+                    <div class="project-card animate-element" data-category="data-analysis">
+                        <div class="project-image">
+                            <img src="https://forbes.com.br/wp-content/uploads/2022/06/unicornio-startuo.jpg"
+                                alt="Análise dos Unicórnios">
+                        </div>
+                        <div class="project-content">
+                            <h3>Análise dos Unicórnios 2022 — Setores, Países e Investidores</h3>
+                            <p>Análise de empresas que atingiram o status de unicórnio em 2022, explorando setores de
+                                atuação, países de origem, investidores envolvidos e principais tendências de mercado
+                                responsáveis pelo crescimento acelerado dessas startups.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>Jupyter</span>
+                                <span>Matplotlib</span>
+                                <span>NumPy</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/FabinDr" target="_blank" class="btn-project btn-primary">
+                                    <i class='bx bx-link-external'></i>
+                                    <span>Ver Projeto</span>
+                                </a>
+                                <a href="https://github.com/FabinDr/Projeto-analise-de-dados---Case-unicornios"
+                                    target="_blank" class="btn-project btn-secondary">
+                                    <i class='bx bxl-github'></i>
+                                    <span>Código</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- projeto 3 -->
+                    <div class="project-card animate-element" data-category="data-analysis">
+                        <div class="project-image">
+                            <img src="./assets/img/Análsie dos setores.jpg" alt="Análise de Salários em Data Science">
+                        </div>
+                        <div class="project-content">
+                            <h3>Análise de Salários na Área de Dados - Imersão Alura</h3>
+                            <p>Análise dos salários de profissionais de Data Science, investigando níveis de
+                                experiência, tipos de vínculo, cargos, conversão de remunerações para uma moeda padrão,
+                                país de residência e localização da empresa, proporção de trabalho remoto e tendências
+                                salariais.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>Matplotlib</span>
+                                <span>NumPy</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://dashboard-salarios-naarea-de-dados.streamlit.app/" target="_blank"
+                                    class="btn-project btn-primary">
+                                    <i class='bx bx-link-external'></i>
+                                    <span>Ver Projeto</span>
+                                </a>
+                                <a href="https://github.com/FabinDr/Analise-dos-salarios-em-dataScience/tree/main" target="_blank" class="btn-project btn-secondary">
+                                    <i class='bx bxl-github'></i>
+                                    <span>Código</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 4 -->
+                    <div class="project-card animate-element" data-category="data-analysis">
+                        <div class="project-image">
+                            <img src="https://blog.zooxsmart.com/hubfs/Capa---Artigo-de-Blog_-Analise-de-dados.jpg"
+                                alt="Projeto jovem tech">
+                        </div>
+
+                        <div class="project-content">
+                            <h3>Modelo de previsão em vendas - Jovem Tech</h3>
+                            <p>Análise de Dados no Varejo – Atuei na limpeza e organização de dados reais de vendas,
+                                análise estatística com Python (Pandas, NumPy) e geração de dados sintéticos. Estruturei
+                                o código em classes reutilizáveis, aplicando boas práticas de modularização. O trabalho
+                                resultou em insights acionáveis para apoiar decisões estratégicas no setor varejista.
+                            </p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>NumPy</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/FabinDr" target="_blank" class="btn-project btn-primary">
+                                    <i class='bx bx-link-external'></i>
+                                    <span>Ver Projeto</span>
+                                </a>
+                                <a href="https://github.com/FabinDr" target="_blank" class="btn-project btn-secondary">
+                                    <i class='bx bxl-github'></i>
+                                    <span>Código</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="projects-cta">
+                    <a href="projetos.html" class="btn btn-outline" data-translate="viewAllProjects">
+                        <span>Ver Todos os Projetos</span>
+                        <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <!-- <span class="section-tag" data-translate="contactTag">Contato</span> -->
+                    <h2 class="section-title" data-translate="contactTitle">Vamos Trabalhar Juntos</h2>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-info-section">
+                        <div class="contact-info-card">
+                            <div class="contact-icon">
+                                <i class='bx bx-envelope'></i>
+                            </div>
+                            <h3 data-translate="email">Email</h3>
+                            <div class="contact-details">
+                                <!-- <span class="contact-label">Entre em contato</span> -->
+                                <a href="mailto:fbduarte.ic@gmail.com" class="contact-value">fbduarte.ic@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon">
+                                <i class='bx bx-map'></i>
+                            </div>
+                            <h3 data-translate="location">Localização</h3>
+                            <div class="contact-details">
+                                <!-- <span class="contact-label">Baseado em</span> -->
+                                <span class="contact-value" data-translate="locationValue">São Luís, Maranhão</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h3 data-translate="socialNetworks">Redes Sociais</h3>
+                        <div class="social-links-contact">
+                            <a href="https://www.linkedin.com/in/fabioduarte-ic/" target="_blank"
+                                class="social-link-contact linkedin" aria-label="LinkedIn">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                            <a href="https://github.com/FabinDr" target="_blank" class="social-link-contact github"
+                                aria-label="GitHub">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-cta">
+                        <div class="contact-cta-content">
+                            <h3 data-translate="letsChat">Vamos conversar?</h3>
+                            <p data-translate="chatDescription">Estou sempre aberto a novas oportunidades e projetos
+                                desafiadores. Entre em contato!</p>
+                            <a href="mailto:fbduarte.ic@gmail.com" class="btn btn-primary">
+                                <i class='bx bx-envelope'></i>
+                                <span data-translate="sendEmail">Enviar Email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="./assets/img/logo-02.svg" alt="Logo" class="footer-logo-img">
+                            <span class="footer-brand-name">Fabio <span>Duarte</span></span>
+                        </div>
+                        <p class="footer-description" data-translate="footerDescription">
+                            Analista de dados especializado em transformar informações complexas em insights
+                            estratégicos para impulsionar o crescimento dos negócios.
+                        </p>
+                        <div class="footer-social">
+                            <a href="https://www.linkedin.com/in/fabioduarte-ic/" target="_blank"
+                                class="footer-social-link" aria-label="LinkedIn">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                            <a href="https://github.com/FabinDr" target="_blank" class="footer-social-link"
+                                aria-label="GitHub">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                            <a href="mailto:fbduarte.ic@gmail.com" class="footer-social-link" aria-label="Email">
+                                <i class='bx bx-envelope'></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links-section">
+                        <div class="footer-links-group">
+                            <h4 data-translate="navigation">Navegação</h4>
+                            <ul class="footer-links">
+                                <li><a href="#home" data-translate="home">Home</a></li>
+                                <li><a href="#about" data-translate="about">Sobre</a></li>
+                                <li><a href="#experience" data-translate="experience">Experiência</a></li>
+                                <li><a href="#projects" data-translate="projects">Projetos</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-links-group">
+                            <h4 data-translate="contact">Contato</h4>
+                            <ul class="footer-links">
+                                <li><a href="mailto:fbduarte.ic@gmail.com">fbduarte.ic@gmail.com</a></li>
+                                <li><a href="#" data-translate="locationValue">São Luís, Maranhão</a></li>
+                                <li><a href="#contact" data-translate="getInTouch">Entre em Contato</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        <p>&copy; 2025 Fabio Duarte. <span data-translate="footerText">Todos os direitos
+                                reservados.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/translations.js"></script>
+    <script src="./assets/js/theme-light.js"></script>
+    <script src="./script.js"></script>
+    <script src="./assets/js/projetos.js"></script>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Fabio Duarte",
+        "jobTitle": "Analista de Dados",
+        "description": "Especialista em transformar dados complexos em insights estratégicos",
+        "url": "https://fabioduarte.dev",
+        "sameAs": [
+            "https://www.linkedin.com/in/fabioduarte-ic/",
+            "https://github.com/FabinDr"
+        ],
+        "knowsAbout": ["Python", "SQL", "Power BI", "Machine Learning", "Data Science", "Node.js"],
+        "alumniOf": "Universidade Federal do Maranhão"
+    }
+    </script>
+</body>
+
+</html>

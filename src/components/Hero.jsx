@@ -17,35 +17,34 @@ const Hero = () => {
     'Viva de dados, pense em dados.'
   ]
 
+  // Robust typewriter without stacking timers
   useEffect(() => {
-    const type = () => {
-      const current = texts[currentIndex]
-      
-      if (isDeleting) {
-        setCurrentText(current.substring(0, charIndex - 1))
-        setCharIndex(charIndex - 1)
+    const current = texts[currentIndex] || ''
+    let timeout
+
+    if (!isDeleting) {
+      if (charIndex < current.length) {
+        timeout = setTimeout(() => {
+          setCurrentText(current.slice(0, charIndex + 1))
+          setCharIndex((v) => v + 1)
+        }, 100)
       } else {
-        setCurrentText(current.substring(0, charIndex + 1))
-        setCharIndex(charIndex + 1)
+        timeout = setTimeout(() => setIsDeleting(true), 1200)
       }
-
-      let typeSpeed = isDeleting ? 50 : 100
-
-      if (!isDeleting && charIndex === current.length) {
-        typeSpeed = 2000
-        setIsDeleting(true)
-      } else if (isDeleting && charIndex === 0) {
+    } else {
+      if (charIndex > 0) {
+        timeout = setTimeout(() => {
+          setCurrentText(current.slice(0, charIndex - 1))
+          setCharIndex((v) => v - 1)
+        }, 50)
+      } else {
         setIsDeleting(false)
-        setCurrentIndex((currentIndex + 1) % texts.length)
-        typeSpeed = 500
+        setCurrentIndex((i) => (i + 1) % texts.length)
       }
-
-      setTimeout(type, typeSpeed)
     }
 
-    const timer = setTimeout(type, 100)
-    return () => clearTimeout(timer)
-  }, [charIndex, isDeleting, currentIndex, texts])
+    return () => clearTimeout(timeout)
+  }, [texts, currentIndex, charIndex, isDeleting])
 
   const socialLinks = [
     {

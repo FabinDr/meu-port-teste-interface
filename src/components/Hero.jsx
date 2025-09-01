@@ -175,7 +175,7 @@ const Hero = () => {
             <div className="relative">
               {/* Main Profile Image */}
               <motion.div
-                animate={{ 
+                animate={{
                   y: [0, -10, 0],
                 }}
                 transition={{
@@ -183,7 +183,7 @@ const Hero = () => {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl"
+                className="relative w-80 h-80 rounded-full overflow-hidden ring-4 ring-primary shadow-[0_0_60px_rgba(0,212,255,0.35)]"
               >
                 <img
                   src="/assets/img/img-perfil.png"
@@ -191,13 +191,15 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
                 
+                {/* Outer glow ring */}
+                <div className="absolute -inset-3 rounded-full border-2 border-primary/50 opacity-80" />
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
               </motion.div>
 
               {/* Floating Icons */}
               <motion.div
-                animate={{ 
+                animate={{
                   rotate: 360,
                   scale: [1, 1.1, 1]
                 }}
@@ -205,7 +207,7 @@ const Hero = () => {
                   rotate: { duration: 20, repeat: Infinity, ease: "linear" },
                   scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
                 }}
-                className="absolute -top-4 -right-4 w-16 h-16 bg-card border border-border rounded-full flex items-center justify-center text-primary shadow-lg"
+                className="absolute -top-6 -right-6 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -213,7 +215,7 @@ const Hero = () => {
               </motion.div>
 
               <motion.div
-                animate={{ 
+                animate={{
                   rotate: -360,
                   y: [0, -10, 0]
                 }}
@@ -221,7 +223,7 @@ const Hero = () => {
                   rotate: { duration: 15, repeat: Infinity, ease: "linear" },
                   y: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }
                 }}
-                className="absolute -bottom-4 -left-4 w-16 h-16 bg-card border border-border rounded-full flex items-center justify-center text-primary shadow-lg"
+                className="absolute -bottom-6 -left-6 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
@@ -229,7 +231,7 @@ const Hero = () => {
               </motion.div>
 
               <motion.div
-                animate={{ 
+                animate={{
                   scale: [1, 1.2, 1],
                   x: [0, 5, 0]
                 }}
@@ -239,7 +241,7 @@ const Hero = () => {
                   ease: "easeInOut",
                   delay: 0.5
                 }}
-                className="absolute top-1/2 -right-8 w-14 h-14 bg-card border border-border rounded-full flex items-center justify-center text-primary shadow-lg"
+                className="absolute top-1/2 -right-10 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -259,7 +261,7 @@ const Hero = () => {
           transition={{ delay: 1.5, duration: 0.8 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground"
         >
-          <span className="text-sm font-medium">Scroll</span>
+          <span className="text-sm font-medium">{t('scroll')}</span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

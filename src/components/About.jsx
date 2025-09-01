@@ -8,8 +8,7 @@ const About = () => {
 
   const skills = [
     t('dataAnalysis'),
-    t('dataVisualization'),
-    t('appliedStatistics')
+    t('dataVisualization')
   ]
 
   const containerVariants = {
@@ -59,7 +58,7 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={containerVariants}
-            className="space-y-6"
+            className="space-y-6 text-left"
           >
             <motion.p
               variants={itemVariants}

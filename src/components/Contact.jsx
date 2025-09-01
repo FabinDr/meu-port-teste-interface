@@ -57,14 +57,6 @@ const Contact = () => {
                 <a href="mailto:fbduarte.ic@gmail.com" className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors">
                   fbduarte.ic@gmail.com
                 </a>
-                <div className="mt-4">
-                  <Button asChild variant="gradient">
-                    <a href="mailto:fbduarte.ic@gmail.com" aria-label={t('sendEmail')}>
-                      <Send className="w-4 h-4" />
-                      {t('sendEmail')}
-                    </a>
-                  </Button>
-                </div>
               </CardContent>
             </Card>
           </motion.div>
@@ -117,10 +109,12 @@ const Contact = () => {
             <div className="relative p-8">
               <h3 className="text-2xl font-bold mb-2">{t('letsChat')}</h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">{t('chatDescription')}</p>
-              <Button asChild variant="gradient">
+              <Button asChild variant="gradient" className="ml-8 pl-4 pr-[47px]">
                 <a href="mailto:fbduarte.ic@gmail.com">
-                  <Send className="w-4 h-4" />
-                  {t('sendEmail')}
+                  <span className="inline-flex items-center gap-2">
+                    <Send className="w-4 h-4" />
+                    {t('sendEmail')}
+                  </span>
                 </a>
               </Button>
             </div>

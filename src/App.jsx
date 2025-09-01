@@ -22,10 +22,10 @@ function App() {
           <main>
             <Hero />
             <About />
+            <Projects />
+            <SkillsGrid />
             <Experience />
             <Education />
-            <SkillsGrid />
-            <Projects />
             <Contact />
           </main>
           <Footer />

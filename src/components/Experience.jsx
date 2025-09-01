@@ -71,11 +71,11 @@ const Experience = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="text-center mb-16"
+          className="mb-12 text-left"
         >
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-3xl md:text-4xl font-bold mb-2"
           >
             {t('experienceTitle')}
           </motion.h2>
@@ -102,10 +102,10 @@ const Experience = () => {
                     <div className="absolute left-6 top-16 w-0.5 h-full bg-gradient-to-b from-primary to-transparent opacity-30" />
                   )}
 
-                  <Card className="card-hover relative overflow-hidden">
+                  <Card className="card-hover relative overflow-hidden ring-2 ring-primary/30 shadow-[0_8px_40px_rgba(16,185,129,0.15)]">
                     {/* Accent Border */}
                     <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-primary to-primary/50" />
-                    
+
                     <CardHeader>
                       <div className="flex items-start gap-4">
                         {/* Icon */}

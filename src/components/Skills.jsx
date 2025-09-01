@@ -98,18 +98,6 @@ const Skills = () => {
     }
   }
 
-  const getLevelColor = (level) => {
-    switch (level) {
-      case 'Avançado':
-        return 'from-green-400 to-emerald-600'
-      case 'Intermediário':
-        return 'from-blue-400 to-blue-600'
-      case 'Básico':
-        return 'from-yellow-400 to-orange-500'
-      default:
-        return 'from-gray-400 to-gray-600'
-    }
-  }
 
   const getLevelBadgeColor = (level) => {
     switch (level) {
@@ -198,21 +186,6 @@ const Skills = () => {
                           {skill.description}
                         </p>
                         
-                        {/* Modern level indicator */}
-                        <div className="mt-3">
-                          <div className="w-full h-1 bg-border rounded-full overflow-hidden">
-                            <motion.div
-                              initial={{ width: 0 }}
-                              whileInView={{ 
-                                width: skill.level === 'Avançado' ? '90%' : 
-                                       skill.level === 'Intermediário' ? '70%' : '50%' 
-                              }}
-                              viewport={{ once: true }}
-                              transition={{ duration: 1, delay: 0.5 }}
-                              className={`h-full bg-gradient-to-r ${getLevelColor(skill.level)} rounded-full`}
-                            />
-                          </div>
-                        </div>
                       </motion.div>
                     ))}
                   </CardContent>

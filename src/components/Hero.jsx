@@ -73,10 +73,12 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+      {/* Background Pattern + Starfield */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-      
+      {/* Stars */}
+      <StarField count={120} />
+
       <div className="container-max px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}

@@ -5,7 +5,6 @@ import { Button } from './ui/Button'
 import { useTheme } from '../contexts/ThemeContext'
 import { useLanguage } from '../contexts/LanguageContext'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { useLocation, useNavigate } from 'react-router-dom'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)

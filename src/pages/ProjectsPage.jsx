@@ -32,16 +32,13 @@ const ProjectsPage = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
       <StarField count={140} />
       <div className="container-max relative z-10">
-        <div className="mb-6">
-          <a href="/" className="inline-flex items-center gap-2 text-sm text-primary hover:underline"><ArrowLeft className="w-4 h-4" />Voltar para o início</a>
-        </div>
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-100px' }} variants={container} className="mb-10 text-left">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-100px' }} variants={container} className="mb-10 text-center">
           <motion.h1 variants={item} className="text-3xl md:text-4xl font-bold mb-3">Meus <span className="text-primary">Projetos</span></motion.h1>
-          <div className="h-1 w-24 bg-primary/70 rounded mb-3" />
-          <motion.p variants={item} className="text-muted-foreground max-w-2xl">Projetos pessoais e acadêmicos que demonstram minhas habilidades técnicas e criatividade</motion.p>
+          <div className="h-1 w-24 bg-primary/70 rounded mb-3 mx-auto" />
+          <motion.p variants={item} className="text-muted-foreground max-w-2xl mx-auto">Projetos pessoais e acadêmicos que demonstram minhas habilidades técnicas e criatividade</motion.p>
         </motion.div>
 
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={container} className="flex flex-wrap gap-2 mb-10">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={container} className="flex flex-wrap justify-center gap-2 mb-10">
           {filters.map(f => (
             <motion.button
               key={f.id}

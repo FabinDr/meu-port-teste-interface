@@ -14,55 +14,55 @@ const Projects = () => {
     {
       id: 1,
       title: 'Análise dos Unicórnios 2022 — Setores, Países e Investidores',
-      shortDescription: 'Análise de empresas que atingiram o status de unicórnio em 2022.',
-      fullDescription: 'Análise completa de empresas que atingiram o status de unicórnio em 2022, explorando setores de atuação, países de origem, investidores envolvidos e principais tendências de mercado responsáveis pelo crescimento acelerado dessas startups. Este projeto fornece insights valiosos sobre o ecossistema de inovação global e as características que definem empresas de alto crescimento.',
+      shortDescription: 'Estudo aprofundado das empresas que atingiram o status de unicórnio em 2022, com análise setorial, geográfica e de investidores, conectando dados e contexto de mercado.',
+      fullDescription: 'Projeto de análise completa das empresas que se tornaram unicórnios em 2022. Mapeei setores de atuação, países de origem, principais rodadas e investidores, identificando padrões de crescimento e correlações entre região, estágio e volume de investimento. A pesquisa consolida insights sobre o ecossistema de inovação global, tendências responsáveis pelo crescimento acelerado e características compartilhadas por empresas de alto desempenho, culminando em recomendações práticas para stakeholders.',
       image: 'https://forbes.com.br/wp-content/uploads/2022/06/unicornio-startuo.jpg',
       category: 'data-analysis',
       technologies: ['Python', 'Pandas', 'Jupyter', 'Matplotlib', 'NumPy'],
       liveUrl: 'https://github.com/FabinDr',
       codeUrl: 'https://github.com/FabinDr/Projeto-analise-de-dados---Case-unicornios',
       features: [
-        'Análise exploratória de dados de unicórnios globais',
-        'Visualizações interativas de setores e geografias',
-        'Identificação de padrões de investimento',
-        'Insights sobre tendências de mercado',
-        'Relatório executivo com recomendações'
+        'Análise exploratória e limpeza de dados (EDA) com documentação',
+        'Visualizações de setores, países e estágios de investimento',
+        'Clusterização de empresas por perfil de investimento',
+        'Insights sobre tendências e concentração de capital',
+        'Relatório executivo com recomendações acionáveis'
       ]
     },
     {
       id: 2,
       title: 'Análise de Salários na Área de Dados - Imersão Alura',
-      shortDescription: 'Análise dos salários de profissionais de Data Science.',
-      fullDescription: 'Análise abrangente dos salários de profissionais de Data Science, investigando níveis de experiência, tipos de vínculo, cargos, conversão de remunerações para uma moeda padrão, país de residência e localização da empresa, proporção de trabalho remoto e tendências salariais. O projeto inclui dashboard interativo desenvolvido com Streamlit.',
+      shortDescription: 'Análise detalhada dos salários em Data Science, com recortes por senioridade, contrato, país, remoto e variações anuais; inclui dashboard interativo.',
+      fullDescription: 'Estudo abrangente da estrutura salarial na área de dados. Explorei níveis de experiência, tipos de vínculo e cargos, normalizei remunerações, comparei remuneração por país e modalidade de trabalho (remoto/hib/onsite) e observei tendências temporais. O projeto também inclui um dashboard no Streamlit para exploração interativa e geração rápida de insights por recrutadores e profissionais.',
       image: '/assets/img/Análsie dos setores.jpg',
       category: 'data-analysis',
       technologies: ['Python', 'Pandas', 'Matplotlib', 'NumPy', 'Streamlit'],
       liveUrl: 'https://dashboard-salarios-naarea-de-dados.streamlit.app/',
       codeUrl: 'https://github.com/FabinDr/Analise-dos-salarios-em-dataScience/tree/main',
       features: [
-        'Dashboard interativo com Streamlit',
-        'Análise comparativa de salários por região',
-        'Visualização de tendências salariais',
-        'Filtragem por experiência e modalidade de trabalho',
-        'Insights sobre mercado de trabalho em dados'
+        'Dashboard interativo com navegação por filtros',
+        'Comparativos por região, senioridade e modalidade',
+        'Tendências salariais anualizadas',
+        'Conversão e padronização monetária',
+        'Insights práticos para carreira e recrutamento'
       ]
     },
     {
       id: 3,
       title: 'Modelo de previsão em vendas - Jovem Tech',
-      shortDescription: 'Análise de Dados no Varejo com dados reais de vendas.',
-      fullDescription: 'Projeto desenvolvido durante o programa Jovem Tech, focado na análise de dados do varejo. Atuei na limpeza e organização de dados reais de vendas, análise estatística com Python (Pandas, NumPy) e geração de dados sintéticos. O trabalho foi estruturado com código em classes reutilizáveis, aplicando boas práticas de modularização. O resultado foram insights acionáveis para apoiar decisões estratégicas no setor varejista.',
+      shortDescription: 'Análise e modelagem de dados de vendas no varejo com foco em previsões e suporte à decisão; inclui dados reais e sintéticos.',
+      fullDescription: 'Trabalho realizado no programa Jovem Tech com foco em varejo. Partindo de dados reais, executei limpeza, padronização e enriquecimento, conduzi análises estatísticas (Pandas/NumPy) e gerei dados sintéticos para testes controlados. Estruturei o código em classes reutilizáveis, seguindo boas práticas de modularização e versionamento. O resultado foi um conjunto de insights acionáveis e hipóteses de previsão para aumento de receita e otimização de estoque.',
       image: 'https://blog.zooxsmart.com/hubfs/Capa---Artigo-de-Blog_-Analise-de-dados.jpg',
       category: 'data-analysis',
       technologies: ['Python', 'Pandas', 'NumPy', 'Análise Estatística'],
       liveUrl: 'https://github.com/FabinDr',
       codeUrl: 'https://github.com/FabinDr',
       features: [
-        'Limpeza e organização de dados reais de vendas',
-        'Análise estatística avançada',
-        'Geração de dados sintéticos',
-        'Código modularizado e reutilizável',
-        'Insights para decisões estratégicas'
+        'Limpeza, normalização e enriquecimento de dados',
+        'Análise estatística e hipóteses de previsão',
+        'Geração de dados sintéticos para simulações',
+        'Arquitetura modular orientada a classes',
+        'Recomendações estratégicas para varejo'
       ]
     }
   ]
@@ -191,7 +191,7 @@ const Projects = () => {
                   </CardHeader>
 
                   <CardContent className="space-y-4">
-                    <p className="text-muted-foreground text-sm line-clamp-3">
+                    <p className="text-muted-foreground text-sm line-clamp-4">
                       {project.shortDescription}
                     </p>
 

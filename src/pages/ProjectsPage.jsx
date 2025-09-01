@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ExternalLink, Github, Eye, X } from 'lucide-react'
+import { ExternalLink, Github, Eye, X, ArrowLeft } from 'lucide-react'
 import { Button } from '../components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card'
 import { useLanguage } from '../contexts/LanguageContext'

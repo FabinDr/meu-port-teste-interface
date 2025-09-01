@@ -11,7 +11,6 @@ const Contact = () => {
   const socialLinks = [
     { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/fabioduarte-ic/' },
     { icon: Github, label: 'GitHub', href: 'https://github.com/FabinDr' },
-    { icon: Mail, label: t('email'), href: 'mailto:fbduarte.ic@gmail.com' },
   ]
 
   const container = {
@@ -25,7 +24,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding bg-card/30">
       <div className="container-max">
         <motion.div
           initial="hidden"
@@ -42,78 +41,91 @@ const Contact = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Email */}
+        {/* Info cards (email + location) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={container}>
-            <Card className="card-hover h-full">
+            <Card className="card-hover h-full text-center">
               <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-primary/15 text-primary flex items-center justify-center">
-                    <Mail className="w-6 h-6" />
+                <div className="flex flex-col items-center gap-4">
+                  <div className="w-20 h-20 rounded-full bg-primary/15 text-primary border border-primary/20 flex items-center justify-center">
+                    <Mail className="w-8 h-8" />
                   </div>
                   <CardTitle className="text-xl">{t('email')}</CardTitle>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">fbduarte.ic@gmail.com</p>
-                <Button asChild variant="gradient">
-                  <a href="mailto:fbduarte.ic@gmail.com" aria-label={t('sendEmail')}>
-                    <Send className="w-4 h-4" />
-                    {t('sendEmail')}
-                  </a>
-                </Button>
+              <CardContent>
+                <a href="mailto:fbduarte.ic@gmail.com" className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors">
+                  fbduarte.ic@gmail.com
+                </a>
+                <div className="mt-4">
+                  <Button asChild variant="gradient">
+                    <a href="mailto:fbduarte.ic@gmail.com" aria-label={t('sendEmail')}>
+                      <Send className="w-4 h-4" />
+                      {t('sendEmail')}
+                    </a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </motion.div>
 
-          {/* Location */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={container}>
-            <Card className="card-hover h-full">
+            <Card className="card-hover h-full text-center">
               <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-primary/15 text-primary flex items-center justify-center">
-                    <MapPin className="w-6 h-6" />
+                <div className="flex flex-col items-center gap-4">
+                  <div className="w-20 h-20 rounded-full bg-primary/15 text-primary border border-primary/20 flex items-center justify-center">
+                    <MapPin className="w-8 h-8" />
                   </div>
                   <CardTitle className="text-xl">{t('location')}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">{t('locationValue')}</p>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          {/* Socials */}
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={container}>
-            <Card className="card-hover h-full">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-primary/15 text-primary flex items-center justify-center">
-                    <Github className="w-6 h-6" />
-                  </div>
-                  <CardTitle className="text-xl">{t('socialNetworks')}</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-3">
-                  {socialLinks.map(({ icon: Icon, label, href }) => (
-                    <a
-                      key={label}
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium hover:border-primary/50 hover:text-primary transition-all duration-300"
-                    >
-                      <span className="inline-flex items-center gap-2">
-                        <Icon className="w-4 h-4" /> {label}
-                      </span>
-                    </a>
-                  ))}
-                </div>
+                <p className="text-lg font-medium text-muted-foreground">{t('locationValue')}</p>
               </CardContent>
             </Card>
           </motion.div>
         </div>
+
+        {/* Social section */}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={container}>
+          <Card className="card-hover text-center mb-8">
+            <CardHeader>
+              <CardTitle className="text-xl">{t('socialNetworks')}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex justify-center gap-4 flex-wrap">
+                {socialLinks.map(({ icon: Icon, label, href }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-14 h-14 rounded-full bg-secondary border border-border text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300 flex items-center justify-center"
+                  >
+                    <Icon className="w-6 h-6" />
+                  </a>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <Card className="relative overflow-hidden text-center">
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent" />
+            <div className="relative p-8">
+              <h3 className="text-2xl font-bold mb-2">{t('letsChat')}</h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">{t('chatDescription')}</p>
+              <Button asChild variant="gradient">
+                <a href="mailto:fbduarte.ic@gmail.com">
+                  <Send className="w-4 h-4" />
+                  {t('sendEmail')}
+                </a>
+              </Button>
+            </div>
+          </Card>
+        </motion.div>
       </div>
     </section>
   )

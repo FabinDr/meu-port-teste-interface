@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Github, Linkedin, Mail, ChevronDown } from 'lucide-react'
 import { Button } from './ui/Button'
 import { useLanguage } from '../contexts/LanguageContext'
+import StarField from './StarField'
 
 const Hero = () => {
   const { t } = useLanguage()

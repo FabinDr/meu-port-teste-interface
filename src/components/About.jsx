@@ -102,7 +102,7 @@ const About = () => {
             </motion.div>
           </motion.div>
 
-          {/* Visual Element */}
+          {/* Visual Element: Photo like original */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -110,69 +110,11 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center"
           >
-            <Card className="card-hover max-w-md">
-              <CardContent className="p-8">
-                <div className="relative">
-                  {/* Abstract Data Visualization */}
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 bg-primary rounded-full animate-pulse" />
-                      <div className="h-2 bg-gradient-to-r from-primary to-primary/50 rounded-full flex-1" />
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 bg-accent rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
-                      <div className="h-2 bg-gradient-to-r from-accent to-accent/50 rounded-full flex-1" style={{ width: '80%' }} />
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 bg-secondary rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-                      <div className="h-2 bg-gradient-to-r from-secondary to-secondary/50 rounded-full flex-1" style={{ width: '60%' }} />
-                    </div>
-                  </div>
-
-                  {/* Stats Cards */}
-                  <div className="grid grid-cols-2 gap-4 mt-8">
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      className="text-center p-4 bg-primary/5 rounded-lg border border-primary/10"
-                    >
-                      <div className="text-2xl font-bold text-primary">2+</div>
-                      <div className="text-sm text-muted-foreground">Anos de Experiência</div>
-                    </motion.div>
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      className="text-center p-4 bg-accent/5 rounded-lg border border-accent/10"
-                    >
-                      <div className="text-2xl font-bold text-accent">10+</div>
-                      <div className="text-sm text-muted-foreground">Projetos Realizados</div>
-                    </motion.div>
-                  </div>
-
-                  {/* Decorative Elements */}
-                  <motion.div
-                    animate={{
-                      rotate: 360,
-                      scale: [1, 1.1, 1]
-                    }}
-                    transition={{
-                      rotate: { duration: 20, repeat: Infinity, ease: "linear" },
-                      scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-                    }}
-                    className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full"
-                  />
-                  <motion.div
-                    animate={{
-                      rotate: -360,
-                      scale: [1, 1.2, 1]
-                    }}
-                    transition={{
-                      rotate: { duration: 15, repeat: Infinity, ease: "linear" },
-                      scale: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }
-                    }}
-                    className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent/20 rounded-full"
-                  />
-                </div>
-              </CardContent>
-            </Card>
+            <div className="relative">
+              <div className="w-[320px] h-[320px] rounded-xl overflow-hidden border-2 border-border bg-secondary/40 flex items-center justify-center">
+                <img src="/assets/img/img-perfil.png" alt="Foto Fabio" className="w-full h-full object-cover" />
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

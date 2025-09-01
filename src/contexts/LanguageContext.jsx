@@ -19,6 +19,7 @@ const translations = {
     skills: 'Habilidades',
     projects: 'Projetos',
     contact: 'Contato',
+    education: 'Formação',
     
     // Hero Section
     heroSubtitle: 'Analista de Dados',
@@ -35,6 +36,7 @@ const translations = {
     dataAnalysis: 'Análise de Dados',
     dataVisualization: 'Visualização de Dados',
     appliedStatistics: 'Estatística Aplicada',
+    educationTitle: 'Formação Acadêmica',
     
     // Experience Section
     experienceTitle: 'Experiência Profissional',
@@ -79,6 +81,7 @@ const translations = {
     skills: 'Skills',
     projects: 'Projects',
     contact: 'Contact',
+    education: 'Education',
     
     // Hero Section
     heroSubtitle: 'Data Analyst',
@@ -95,6 +98,7 @@ const translations = {
     dataAnalysis: 'Data Analysis',
     dataVisualization: 'Data Visualization',
     appliedStatistics: 'Applied Statistics',
+    educationTitle: 'Education',
     
     // Experience Section
     experienceTitle: 'Professional Experience',

@@ -23,6 +23,7 @@ const Header = () => {
   const navItems = [
     { href: '#home', label: t('home') },
     { href: '#about', label: t('about') },
+    { href: '#education', label: t('education') },
     { href: '#experience', label: t('experience') },
     { href: '#skills', label: t('skills') },
     { href: '#projects', label: t('projects') },
@@ -81,13 +82,14 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Theme and Language Controls */}
+          {/* Theme and Language Controls (header keeps desktop duplicates) */}
           <div className="flex items-center gap-2">
             <Button
+              aria-label="Toggle theme"
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="hidden sm:flex"
+              className="hidden lg:flex"
             >
               {theme === 'dark' ? (
                 <Sun className="h-4 w-4" />
@@ -97,10 +99,11 @@ const Header = () => {
             </Button>
 
             <Button
+              aria-label="Toggle language"
               variant="ghost"
               size="icon"
               onClick={toggleLanguage}
-              className="hidden sm:flex"
+              className="hidden lg:flex"
             >
               <Globe className="h-4 w-4" />
               <span className="ml-1 text-xs font-medium">

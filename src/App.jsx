@@ -5,10 +5,12 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
 import Experience from './components/Experience'
+import Education from './components/Education'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import SideControls from './components/SideControls'
 
 function App() {
   return (
@@ -16,9 +18,11 @@ function App() {
       <LanguageProvider>
         <div className="min-h-screen bg-background text-foreground">
           <Header />
+          <SideControls />
           <main>
             <Hero />
             <About />
+            <Education />
             <Experience />
             <Skills />
             <Projects />

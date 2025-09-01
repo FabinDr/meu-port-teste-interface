@@ -1,5 +1,5 @@
 import React from 'react'
-import { Database, BarChart3, Boxes, GitBranch, Terminal, Brain, Notebook, Sigma } from 'lucide-react'
+import { Database, BarChart3, Boxes, GitBranch, Terminal, Brain, BookOpen, Sigma } from 'lucide-react'
 import { Card, CardContent } from './ui/Card'
 import { useLanguage } from '../contexts/LanguageContext'
 

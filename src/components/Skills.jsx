@@ -98,20 +98,6 @@ const Skills = () => {
     }
   }
 
-
-  const getLevelBadgeColor = (level) => {
-    switch (level) {
-      case 'Avançado':
-        return 'bg-green-100 text-green-700 border-green-200 dark:bg-green-900/20 dark:text-green-400 dark:border-green-800'
-      case 'Intermediário':
-        return 'bg-blue-100 text-blue-700 border-blue-200 dark:bg-blue-900/20 dark:text-blue-400 dark:border-blue-800'
-      case 'Básico':
-        return 'bg-yellow-100 text-yellow-700 border-yellow-200 dark:bg-yellow-900/20 dark:text-yellow-400 dark:border-yellow-800'
-      default:
-        return 'bg-gray-100 text-gray-700 border-gray-200 dark:bg-gray-900/20 dark:text-gray-400 dark:border-gray-800'
-    }
-  }
-
   return (
     <section id="skills" className="section-padding">
       <div className="container-max">
@@ -174,18 +160,14 @@ const Skills = () => {
                         whileHover={{ scale: 1.02 }}
                         className="p-4 bg-card/50 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300"
                       >
-                        <div className="flex items-center justify-between mb-2">
+                        <div className="mb-2">
                           <h4 className="font-semibold text-foreground">
                             {skill.name}
                           </h4>
-                          <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getLevelBadgeColor(skill.level)}`}>
-                            {skill.level}
-                          </span>
                         </div>
                         <p className="text-sm text-muted-foreground">
                           {skill.description}
-                        </p>
-                        
+                        </p>                        
                       </motion.div>
                     ))}
                   </CardContent>

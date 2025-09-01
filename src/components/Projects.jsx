@@ -20,13 +20,14 @@ const Projects = () => {
     { id: 'all', label: t('all') },
     { id: 'data-analysis', label: t('dataAnalysisFilter') },
     { id: 'machine-learning', label: t('machineLearningFilter') },
+    { id: 'web-dev', label: 'Desenvolvimento' },
     { id: 'sql', label: t('sql') },
     { id: 'dashboard', label: t('dashboard') }
   ]
 
   const filteredProjects = activeFilter === 'all'
     ? projectsList
-    : projectsList.filter(project => project.category === activeFilter)
+    : projectsList.filter(project => project.category === activeFilter || (project.categories && project.categories.includes(activeFilter)))
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -128,6 +129,9 @@ const Projects = () => {
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     />
+                    {project.status && (
+                      <span className="absolute top-3 left-3 px-2 py-0.5 text-xs rounded-full bg-emerald-500 text-white shadow">{project.status}</span>
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">

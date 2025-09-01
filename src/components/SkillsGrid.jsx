@@ -5,7 +5,7 @@ import { useLanguage } from '../contexts/LanguageContext'
 
 const skills = [
   { name: 'Python', icon: Brain },
-  { name: 'Pandas', icon: Notebook },
+  { name: 'Pandas', icon: BookOpen },
   { name: 'NumPy', icon: Sigma },
   { name: 'Matplotlib', icon: BarChart3 },
   { name: 'Seaborn', icon: BarChart3 },
@@ -14,7 +14,7 @@ const skills = [
   { name: 'MySQL', icon: Database },
   { name: 'PostgreSQL', icon: Database },
   { name: 'Power BI', icon: BarChart3 },
-  { name: 'Jupyter', icon: Notebook },
+  { name: 'Jupyter', icon: BookOpen },
   { name: 'Streamlit', icon: BarChart3 },
   { name: 'Git', icon: GitBranch },
   { name: 'Docker', icon: Boxes },

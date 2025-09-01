@@ -82,41 +82,14 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Theme and Language Controls (header keeps desktop duplicates) */}
+          {/* Only mobile menu button (theme/lang moved to side controls) */}
           <div className="flex items-center gap-2">
-            <Button
-              aria-label="Toggle theme"
-              variant="ghost"
-              size="icon"
-              onClick={toggleTheme}
-              className="hidden lg:flex"
-            >
-              {theme === 'dark' ? (
-                <Sun className="h-4 w-4" />
-              ) : (
-                <Moon className="h-4 w-4" />
-              )}
-            </Button>
-
-            <Button
-              aria-label="Toggle language"
-              variant="ghost"
-              size="icon"
-              onClick={toggleLanguage}
-              className="hidden lg:flex"
-            >
-              <Globe className="h-4 w-4" />
-              <span className="ml-1 text-xs font-medium">
-                {language.toUpperCase()}
-              </span>
-            </Button>
-
-            {/* Mobile Menu Button */}
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden"
+              aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
             >
               {isMobileMenuOpen ? (
                 <X className="h-5 w-5" />
@@ -149,31 +122,6 @@ const Header = () => {
                 </motion.button>
               ))}
               
-              <div className="flex items-center gap-2 pt-4 border-t border-border/50">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={toggleTheme}
-                  className="flex items-center gap-2"
-                >
-                  {theme === 'dark' ? (
-                    <Sun className="h-4 w-4" />
-                  ) : (
-                    <Moon className="h-4 w-4" />
-                  )}
-                  {theme === 'dark' ? 'Light' : 'Dark'}
-                </Button>
-
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={toggleLanguage}
-                  className="flex items-center gap-2"
-                >
-                  <Globe className="h-4 w-4" />
-                  {language === 'pt' ? 'English' : 'Português'}
-                </Button>
-              </div>
             </nav>
           </motion.div>
         )}

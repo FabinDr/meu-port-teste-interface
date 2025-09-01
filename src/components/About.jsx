@@ -112,7 +112,7 @@ const About = () => {
           >
             <div className="relative">
               <div className="w-[320px] h-[320px] rounded-xl overflow-hidden border-2 border-border bg-secondary/40 flex items-center justify-center">
-                <img src="/assets/img/img-perfil.png" alt="Foto Fabio" className="w-full h-full object-cover" />
+                <img src="/assets/img/img-perfil.png" alt="Foto Fabio" className="w-full h-full object-cover my-auto" />
               </div>
             </div>
           </motion.div>

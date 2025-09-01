@@ -33,7 +33,7 @@ const ProjectsPage = () => {
       <StarField count={140} />
       <div className="container-max relative z-10">
         <div className="mb-6">
-          <a href="/" className="inline-flex items-center gap-2 text-sm text-primary hover:underline"><span className="i-bx bx-arrow-back" />Voltar para o início</a>
+          <a href="/" className="inline-flex items-center gap-2 text-sm text-primary hover:underline"><ArrowLeft className="w-4 h-4" />Voltar para o início</a>
         </div>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-100px' }} variants={container} className="mb-10 text-left">
           <motion.h1 variants={item} className="text-3xl md:text-4xl font-bold mb-3">Meus <span className="text-primary">Projetos</span></motion.h1>

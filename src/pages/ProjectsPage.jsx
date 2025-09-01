@@ -16,11 +16,12 @@ const ProjectsPage = () => {
     { id: 'all', label: t('all') },
     { id: 'data-analysis', label: t('dataAnalysisFilter') },
     { id: 'machine-learning', label: t('machineLearningFilter') },
+    { id: 'web-dev', label: 'Desenvolvimento' },
     { id: 'sql', label: t('sql') },
     { id: 'dashboard', label: t('dashboard') }
   ]
 
-  const filtered = activeFilter === 'all' ? allProjects : allProjects.filter(p => p.category === activeFilter)
+  const filtered = activeFilter === 'all' ? allProjects : allProjects.filter(p => p.category === activeFilter || (p.categories && p.categories.includes(activeFilter)))
 
   const container = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.15 } } }
   const item = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }
@@ -31,9 +32,13 @@ const ProjectsPage = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
       <StarField count={140} />
       <div className="container-max relative z-10">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-100px' }} variants={container} className="mb-12 text-left">
-          <motion.h1 variants={item} className="text-3xl md:text-4xl font-bold mb-2">{t('projectsTitle')}</motion.h1>
-          <motion.p variants={item} className="text-muted-foreground max-w-2xl">{t('projectsDescription')}</motion.p>
+        <div className="mb-6">
+          <a href="/" className="inline-flex items-center gap-2 text-sm text-primary hover:underline"><span className="i-bx bx-arrow-back" />Voltar para o início</a>
+        </div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-100px' }} variants={container} className="mb-10 text-left">
+          <motion.h1 variants={item} className="text-3xl md:text-4xl font-bold mb-3">Meus <span className="text-primary">Projetos</span></motion.h1>
+          <div className="h-1 w-24 bg-primary/70 rounded mb-3" />
+          <motion.p variants={item} className="text-muted-foreground max-w-2xl">Projetos pessoais e acadêmicos que demonstram minhas habilidades técnicas e criatividade</motion.p>
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={container} className="flex flex-wrap gap-2 mb-10">
@@ -56,6 +61,7 @@ const ProjectsPage = () => {
                 <Card className="card-hover h-full overflow-hidden">
                   <div className="relative h-48 overflow-hidden">
                     <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                    {project.status && (<span className="absolute top-3 left-3 px-2 py-0.5 text-xs rounded-full bg-emerald-500 text-white shadow">{project.status}</span>)}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="bg-white/20 backdrop-blur-sm rounded-full p-3"><Eye className="w-6 h-6 text-white" /></div>

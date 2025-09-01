@@ -35,14 +35,14 @@ const Education = () => {
   return (
     <section id="education" className="section-padding">
       <div className="container-max">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-100px' }} variants={container} className="text-center mb-16">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-100px' }} variants={container} className="mb-12 text-left">
           <motion.h2 variants={item} className="text-3xl md:text-4xl font-bold">{t('educationTitle')}</motion.h2>
         </motion.div>
 
         <div className="max-w-4xl mx-auto space-y-6">
           {items.map((ed, idx) => (
             <motion.div key={ed.title} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={item}>
-              <Card className="card-hover">
+              <Card className="card-hover ring-2 ring-primary/30 shadow-[0_8px_40px_rgba(16,185,129,0.15)]">
                 <CardHeader>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-primary/15 text-primary flex items-center justify-center">

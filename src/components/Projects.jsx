@@ -213,7 +213,7 @@ const Projects = () => {
 
                     <div className="flex gap-2 pt-2">
                       <Button
-                        variant="outline"
+                        variant="default"
                         size="sm"
                         className="flex-1"
                         onClick={(e) => {

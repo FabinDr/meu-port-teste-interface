@@ -105,8 +105,9 @@ const Skills = () => {
           variants={containerVariants}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-start justify-start"
         >
-          {skillCategories.map((category) => {
+          {skillCategories.map((category, i) => {
             const IconComponent = category.icon
+            const highlight = i === 1
             return (
               <motion.div
                 key={category.id}
@@ -114,7 +115,7 @@ const Skills = () => {
                 whileHover={{ y: -5 }}
                 className="group"
               >
-                <Card className="card-hover h-full">
+                <Card className={`h-full ${highlight ? 'border-primary/60 ring-1 ring-primary' : 'card-hover'}`}>
                   <CardHeader className="text-center pb-4">
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: 5 }}

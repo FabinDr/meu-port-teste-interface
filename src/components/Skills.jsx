@@ -43,24 +43,6 @@ const Skills = () => {
           level: 'Intermediário'
         }
       ]
-    },
-    {
-      id: 3,
-      title: 'Estatística Aplicada',
-      icon: TrendingUp,
-      description: 'Análise estatística e modelagem de dados',
-      skills: [
-        {
-          name: 'Estatística Descritiva',
-          description: 'Análise exploratória de dados',
-          level: 'Intermediário'
-        },
-        {
-          name: 'Análise de Tendências',
-          description: 'Séries temporais e previsões',
-          level: 'Básico'
-        }
-      ]
     }
   ]
 
@@ -121,7 +103,7 @@ const Skills = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-start justify-start"
         >
           {skillCategories.map((category) => {
             const IconComponent = category.icon

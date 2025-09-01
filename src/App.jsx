@@ -19,18 +19,35 @@ function App() {
     <ThemeProvider>
       <LanguageProvider>
         <div className="min-h-screen bg-background text-foreground">
-          <Header />
-          <SideControls />
-          <main>
-            <Hero />
-            <About />
-            <Projects />
-            <SkillsGrid />
-            <Experience />
-            <Education />
-            <Contact />
-          </main>
-          <Footer />
+          <BrowserRouter>
+            <Header />
+            <SideControls />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <main>
+                    <Hero />
+                    <About />
+                    <Projects />
+                    <SkillsGrid />
+                    <Experience />
+                    <Education />
+                    <Contact />
+                  </main>
+                }
+              />
+              <Route
+                path="/projects"
+                element={
+                  <main>
+                    <ProjectsPage />
+                  </main>
+                }
+              />
+            </Routes>
+            <Footer />
+          </BrowserRouter>
         </div>
       </LanguageProvider>
     </ThemeProvider>

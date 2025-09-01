@@ -26,6 +26,7 @@ const translations = {
     heroDescription: 'Especialista em transformar dados complexos em insights estratégicos que impulsionam decisões de negócio e geram valor real para organizações.',
     viewProjects: 'Ver Projetos',
     getInTouch: 'Entre em Contato',
+    scroll: 'Scroll',
     
     // About Section
     aboutTitle: 'Quem sou eu',
@@ -88,6 +89,7 @@ const translations = {
     heroDescription: 'Specialist in transforming complex data into strategic insights that drive business decisions and generate real value for organizations.',
     viewProjects: 'View Projects',
     getInTouch: 'Get In Touch',
+    scroll: 'Scroll',
     
     // About Section
     aboutTitle: 'Who I Am',

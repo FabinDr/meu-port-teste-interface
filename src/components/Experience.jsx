@@ -13,7 +13,7 @@ const Experience = () => {
       icon: Database,
       title: 'Bolsista - Análise de Dados',
       company: 'JOVEM TECH - Pulse | Porto do Itaqui | Fapema',
-      period: 'Maio 2025 - Present',
+      period: 'Maio 2025 - Atual',
       location: 'São Luís, Maranhão',
       description: 'Atuo como bolsista com foco em Análise de Dados, desenvolvendo habilidades práticas em SQL (consultas simples e intermediárias), Excel, Python (Pandas e NumPy) e Power Bi.',
       highlights: [

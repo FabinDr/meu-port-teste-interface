@@ -84,12 +84,12 @@ const ExperienceEducation = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left: Education Card */}
           <motion.div variants={item} initial="hidden" whileInView="visible" viewport={{ once: true }} className="lg:col-span-5">
-            <Card className="card-hover overflow-hidden hover:brightness-110 hover:scale-[1.01]">
-              <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-2/5 bg-gradient-to-br from-primary/20 to-primary/5 p-6 flex items-center justify-center">
-                  <img src="/assets/img/database.svg" alt="Universidade" className="w-32 h-32 object-contain drop-shadow" />
+            <Card className="card-hover overflow-hidden hover:brightness-110 hover:scale-[1.01] flex flex-col items-center">
+              <div className="flex flex-col">
+                <div className="w-full bg-gradient-to-br from-primary/20 to-primary/5 p-6 flex items-center justify-center">
+                  <img src="/assets/img/database.svg" alt="Universidade" className="w-full h-56 object-contain drop-shadow" />
                 </div>
-                <div className="sm:w-3/5">
+                <div className="w-full">
                   <CardHeader className="pb-2">
                     <div className="flex items-start gap-3">
                       <div className="w-12 h-12 rounded-xl bg-primary/15 text-primary flex items-center justify-center">

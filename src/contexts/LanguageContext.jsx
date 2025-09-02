@@ -38,7 +38,8 @@ const translations = {
     dataVisualization: 'Visualização de Dados',
     appliedStatistics: 'Estatística Aplicada',
     educationTitle: 'Formação Acadêmica',
-    
+    experienceEducationTitle: 'Experiência e Formação',
+
     // Experience Section
     experienceTitle: 'Experiência Profissional',
     
@@ -101,7 +102,8 @@ const translations = {
     dataVisualization: 'Data Visualization',
     appliedStatistics: 'Applied Statistics',
     educationTitle: 'Education',
-    
+    experienceEducationTitle: 'Experience & Education',
+
     // Experience Section
     experienceTitle: 'Professional Experience',
     

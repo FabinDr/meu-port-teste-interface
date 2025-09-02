@@ -128,8 +128,8 @@ const ExperienceEducation = () => {
           </motion.div>
 
           {/* Right: Experiences list with custom scroll indicator */}
-          <div className="lg:col-span-7 relative">
-            <div ref={listRef} className="space-y-6 lg:h-[640px] overflow-y-auto pr-6">
+          <div className="lg:col-span-7 relative pb-[9px]">
+            <div ref={listRef} className="space-y-6 lg:h-[826px] overflow-y-auto pr-6">
               {experiences.map((exp) => {
                 const Icon = exp.icon
                 return (

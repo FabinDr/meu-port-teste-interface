@@ -87,7 +87,7 @@ const ExperienceEducation = () => {
             <Card className="card-hover overflow-hidden hover:brightness-110 hover:scale-[1.01] flex flex-col items-center">
               <div className="flex flex-col">
                 <div className="w-full bg-gradient-to-br from-primary/20 to-primary/5 p-6 flex items-center justify-center">
-                  <img src="/assets/img/database.svg" alt="Universidade" className="w-full h-56 object-contain drop-shadow" />
+                  <img src="https://cdn.builder.io/api/v1/image/assets%2F257c6662cbff4e9d9eaaa0956ace7a59%2F4cb23e80ad634efca295fccdc0adfa5d?format=webp&width=800" alt="Universidade Federal do Maranhão" className="w-full h-56 object-cover drop-shadow" />
                 </div>
                 <div className="w-full">
                   <CardHeader className="pb-2">

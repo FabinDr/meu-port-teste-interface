@@ -51,7 +51,7 @@ const ExperienceEducation = () => {
         'Transformação de dados em insights e criação de visualizações',
         'Criação de pipelines de dados e estruturação de análises consistentes'
       ],
-      skills: ['Python', 'Pandas', 'NumPy', 'Excel', 'Análise Estatística', 'Séries Temporais']
+      skills: ['Python', 'Pandas', 'NumPy', 'Excel', 'Análise Estat��stica', 'Séries Temporais']
     },
     {
       id: 2,
@@ -86,9 +86,10 @@ const ExperienceEducation = () => {
           <motion.div variants={item} initial="hidden" whileInView="visible" viewport={{ once: true }} className="lg:col-span-5">
             <Card className="card-hover overflow-hidden hover:brightness-110 hover:scale-[1.01] flex flex-col items-center">
               <div className="flex flex-col">
-                <div className="w-full bg-gradient-to-br from-primary/20 to-primary/5 p-6 flex items-center justify-center">
+                <div className="hidden">
                   <img src="https://cdn.builder.io/api/v1/image/assets%2F257c6662cbff4e9d9eaaa0956ace7a59%2F4cb23e80ad634efca295fccdc0adfa5d?format=webp&width=800" alt="Universidade Federal do Maranhão" className="w-full h-56 md:h-64 lg:h-72 object-cover rounded-t-lg" />
                 </div>
+                <img src="https://cdn.builder.io/api/v1/image/assets%2F257c6662cbff4e9d9eaaa0956ace7a59%2F4cb23e80ad634efca295fccdc0adfa5d?format=webp&width=800" alt="Universidade Federal do Maranhão" className="w-full h-56 md:h-64 lg:h-72 object-cover rounded-t-lg" />
                 <div className="w-full">
                   <CardHeader className="pb-2">
                     <div className="flex items-start gap-3">
@@ -104,7 +105,7 @@ const ExperienceEducation = () => {
                       </div>
                     </div>
                   </CardHeader>
-                  <CardContent className="pt-4">
+                  <CardContent className="pt-4 px-6 pb-6">
                     <h4 className="font-semibold mb-3">Conhecimentos e disciplinas:</h4>
                     <ul className="space-y-2 text-muted-foreground">
                       {[

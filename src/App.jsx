@@ -21,9 +21,9 @@ function App() {
           <main>
             <Hero />
             <About />
-            <ExperienceEducation />
-            <SkillsGrid />
             <Projects />
+            <SkillsGrid />
+            <ExperienceEducation />
             <Contact />
           </main>
           <Footer />

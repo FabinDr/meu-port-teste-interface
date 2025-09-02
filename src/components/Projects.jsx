@@ -4,6 +4,7 @@ import { ExternalLink, Github, Eye, X, Filter } from 'lucide-react'
 import { Button } from './ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/Card'
 import { useLanguage } from '../contexts/LanguageContext'
+import StarField from './StarField'
 
 const Projects = () => {
   const { t } = useLanguage()
@@ -102,8 +103,11 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="section-padding bg-card/30">
-      <div className="container-max">
+    <section id="projects" className="section-padding relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+      <StarField count={100} />
+      <div className="container-max relative z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"

@@ -41,42 +41,6 @@ const Contact = () => {
           </motion.p>
         </motion.div>
 
-        {/* Info cards (email + location) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={container}>
-            <Card className="card-hover h-full text-center">
-              <CardHeader>
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-20 h-20 rounded-full bg-primary/15 text-primary border border-primary/20 flex items-center justify-center">
-                    <Mail className="w-8 h-8" />
-                  </div>
-                  <CardTitle className="text-xl">{t('email')}</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <a href="mailto:fbduarte.ic@gmail.com" className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors">
-                  fbduarte.ic@gmail.com
-                </a>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={container}>
-            <Card className="card-hover h-full text-center">
-              <CardHeader>
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-20 h-20 rounded-full bg-primary/15 text-primary border border-primary/20 flex items-center justify-center">
-                    <MapPin className="w-8 h-8" />
-                  </div>
-                  <CardTitle className="text-xl">{t('location')}</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg font-medium text-muted-foreground">{t('locationValue')}</p>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
 
         {/* Social section */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={container}>

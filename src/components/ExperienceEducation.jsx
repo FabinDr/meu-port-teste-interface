@@ -96,10 +96,10 @@ const ExperienceEducation = () => {
                         <GraduationCap className="w-6 h-6" />
                       </div>
                       <div className="flex-1">
-                        <CardTitle className="text-xl">Bacharelado em Engenharia da Computação</CardTitle>
+                        <CardTitle className="text-xl">Bacharelado Interdisciplinar em Ciência e Tecnologia</CardTitle>
                         <div className="text-muted-foreground text-sm flex flex-wrap gap-3 mt-1">
-                          <span>Universidade Estadual do Maranhão (UEMA)</span>
-                          <span className="flex items-center gap-1"><Calendar className="w-4 h-4" />2022 - Em andamento</span>
+                          <span>Universidade Federal do Maranhão (UFMA)</span>
+                          <span className="flex items-center gap-1"><Calendar className="w-4 h-4" />2023 - Presente | Cursando</span>
                         </div>
                       </div>
                     </div>
@@ -108,9 +108,12 @@ const ExperienceEducation = () => {
                     <h4 className="font-semibold mb-3">Conhecimentos e disciplinas:</h4>
                     <ul className="space-y-2 text-muted-foreground">
                       {[
-                        'Base sólida em matemática, estatística e programação',
-                        'Ênfase em análise de dados e engenharia de software',
-                        'Banco de Dados, Estruturas de Dados e Algoritmos'
+                        'Ciência de Dados: Análise estatística, Visualização de dados e Machine Learning',
+                        'Algoritmos e Programação: Fundamentos da Computação e Estruturas de Dados',
+                        'Matemática Aplicada: Álgebra Linear, Cálculo, Probabilidade e Estatística',
+                        'Engenharia de Software: Metodologias ágeis e arquitetura de sistemas',
+                        'Administração: Gestão de projetos, empreendedorismo e inovação',
+                        'Física e Química: Fundamentos científicos para aplicações tecnológicas'
                       ].map((d) => (
                         <li key={d} className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />

@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent } from './ui/Card'
 import { useLanguage } from '../contexts/LanguageContext'
+import profileImg from '../../assets/img/logo-02.svg'
 
 const About = () => {
   const { t } = useLanguage()
@@ -111,7 +112,7 @@ const About = () => {
           >
             <div className="relative">
               <div className="w-[320px] h-[320px] rounded-xl overflow-hidden border-2 border-border bg-secondary/40 flex items-center justify-center">
-                <img src="/assets/img/img-perfil.png" alt="Foto Fabio" className="w-full h-full object-cover my-auto" />
+                <img src={profileImg} alt="Foto Fabio" className="w-full h-full object-cover my-auto" />
               </div>
             </div>
           </motion.div>

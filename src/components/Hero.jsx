@@ -210,7 +210,7 @@ const Hero = () => {
                   rotate: { duration: 20, repeat: Infinity, ease: "linear" },
                   scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
                 }}
-                className="absolute -top-6 -right-6 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
+                className="absolute top-9 left-[300px] w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>

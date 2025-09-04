@@ -102,6 +102,20 @@ const Projects = ({ showViewAllButton = true, showTopBackButton = false }) => {
     }
   }
 
+  const renderTitle = () => {
+    const title = t('projectsTitle') || ''
+    const words = title.trim().split(' ')
+    if (words.length === 0) return null
+    const last = words.pop()
+    const prefix = words.join(' ')
+    return (
+      <>
+        {prefix && <span>{prefix} </span>}
+        <span className="text-primary">{last}</span>
+      </>
+    )
+  }
+
   return (
     <section id="projects" className="section-padding relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
@@ -109,10 +123,9 @@ const Projects = ({ showViewAllButton = true, showTopBackButton = false }) => {
       <StarField count={100} />
       <div className="container-max relative z-10">
         {showTopBackButton && (
-          <div className="mb-4 flex justify-center">
-            <Button variant="outline" size="sm" onClick={() => { window.location.href = '/' }}>
-              <ArrowLeft className="w-4 h-4" />
-              <span className="ml-2">{t('backToHome')}</span>
+          <div className="mb-6 flex justify-center">
+            <Button variant="link" size="sm" onClick={() => { window.location.href = '/' }} className="text-muted-foreground hover:text-primary">
+              {t('backToHome')}
             </Button>
           </div>
         )}
@@ -125,9 +138,9 @@ const Projects = ({ showViewAllButton = true, showTopBackButton = false }) => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight"
           >
-            {t('projectsTitle')}
+            {renderTitle()}
           </motion.h2>
           <motion.p
             variants={itemVariants}

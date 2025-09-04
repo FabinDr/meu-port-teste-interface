@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import profileImg from '../../assets/img/logo-02.svg'
 import { ArrowRight, Github, Linkedin, Mail, ChevronDown, Database, Brain, BarChart3 } from 'lucide-react'
 import { Button } from './ui/Button'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -190,7 +191,7 @@ const Hero = () => {
                 className="relative w-80 h-80 rounded-full overflow-hidden ring-4 ring-primary shadow-[0_0_60px_rgba(0,212,255,0.35)]"
               >
                 <img
-                  src="/assets/img/img-perfil.png"
+                  src={profileImg}
                   alt="Fabio Duarte"
                   className="w-full h-full object-cover"
                 />

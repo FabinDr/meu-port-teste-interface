@@ -4,14 +4,28 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    // Ensure .jsx files are served with a JS-compatible MIME type in dev
+    {
+      name: 'fix-jsx-mime-type',
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          if (req.url && /\.jsx($|\?)/.test(req.url)) {
+            res.setHeader('Content-Type', 'application/javascript')
+          }
+          next()
+        })
+      },
+    },
+    react(),
+  ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, './src'),
     },
   },
   server: {
     port: 3000,
     host: true,
-  }
+  },
 })

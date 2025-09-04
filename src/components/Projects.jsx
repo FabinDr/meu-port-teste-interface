@@ -277,7 +277,7 @@ const Projects = ({ showViewAllButton = true, showTopBackButton = false }) => {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <Button variant="outline" size="lg" onClick={() => { window.location.href = 'projetos.html' }}>
+            <Button variant="outline" size="lg" onClick={() => { window.location.href = '/projetos.html' }}>
               {t('viewAllProjects')}
               <ExternalLink className="w-4 h-4" />
             </Button>

@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ExternalLink, Github, Eye, X, Filter } from 'lucide-react'
+import { ExternalLink, Github, Eye, X, Filter, ArrowLeft } from 'lucide-react'
 import { Button } from './ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/Card'
 import { useLanguage } from '../contexts/LanguageContext'
 import StarField from './StarField'
 
-const Projects = ({ showViewAllButton = true }) => {
+const Projects = ({ showViewAllButton = true, showTopBackButton = false }) => {
   const { t } = useLanguage()
   const [selectedProject, setSelectedProject] = useState(null)
   const [activeFilter, setActiveFilter] = useState('all')
@@ -32,7 +32,7 @@ const Projects = ({ showViewAllButton = true }) => {
     },
     {
       id: 2,
-      title: 'Análise de Salários na Área de Dados - Imersão Alura',
+      title: 'An��lise de Salários na Área de Dados - Imersão Alura',
       shortDescription: 'Análise detalhada dos salários em Data Science, com recortes por senioridade, contrato, país, remoto e variações anuais; inclui dashboard interativo.',
       fullDescription: 'Estudo abrangente da estrutura salarial na área de dados. Explorei níveis de experiência, tipos de vínculo e cargos, normalizei remunerações, comparei remuneração por país e modalidade de trabalho (remoto/hib/onsite) e observei tendências temporais. O projeto também inclui um dashboard no Streamlit para exploração interativa e geração rápida de insights por recrutadores e profissionais.',
       image: '/assets/img/Análsie dos setores.jpg',
@@ -108,6 +108,14 @@ const Projects = ({ showViewAllButton = true }) => {
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
       <StarField count={100} />
       <div className="container-max relative z-10">
+        {showTopBackButton && (
+          <div className="mb-4 flex justify-center">
+            <Button variant="outline" size="sm" onClick={() => { window.location.href = '/' }}>
+              <ArrowLeft className="w-4 h-4" />
+              <span className="ml-2">{t('backToHome')}</span>
+            </Button>
+          </div>
+        )}
         <motion.div
           initial="hidden"
           whileInView="visible"

@@ -4,6 +4,7 @@ import { Menu, X, Sun, Moon, Globe, ArrowLeft } from 'lucide-react'
 import { Button } from './ui/Button'
 import { useTheme } from '../contexts/ThemeContext'
 import { useLanguage } from '../contexts/LanguageContext'
+import logo from '../../assets/img/logo-02.svg'
 
 const Header = ({ backOnly = false }) => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -54,9 +55,9 @@ const Header = ({ backOnly = false }) => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center gap-2"
           >
-            <img 
-              src="/assets/img/logo-02.svg" 
-              alt="Logo" 
+            <img
+              src={logo}
+              alt="Logo"
               className="w-10 h-10"
             />
             <span className="text-xl font-bold">

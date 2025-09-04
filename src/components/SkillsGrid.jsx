@@ -8,17 +8,13 @@ const skills = [
   { name: 'Pandas', icon: BookOpen },
   { name: 'NumPy', icon: Sigma },
   { name: 'Matplotlib', icon: BarChart3 },
-  { name: 'Seaborn', icon: BarChart3 },
   { name: 'SQL', icon: Database },
   { name: 'SQLite', icon: Database },
   { name: 'MySQL', icon: Database },
-  { name: 'PostgreSQL', icon: Database },
   { name: 'Power BI', icon: BarChart3 },
   { name: 'Jupyter', icon: BookOpen },
   { name: 'Streamlit', icon: BarChart3 },
   { name: 'Git', icon: GitBranch },
-  { name: 'Docker', icon: Boxes },
-  { name: 'Linux', icon: Terminal },
 ]
 
 const SkillsGrid = () => {

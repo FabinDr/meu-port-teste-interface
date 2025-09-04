@@ -59,6 +59,7 @@ const translations = {
     sql: 'SQL',
     dashboard: 'Dashboards',
     viewAllProjects: 'Ver Todos os Projetos',
+    backToHome: 'Voltar para o início',
     
     // Contact Section
     contactTitle: 'Vamos Trabalhar Juntos',
@@ -123,6 +124,7 @@ const translations = {
     sql: 'SQL',
     dashboard: 'Dashboards',
     viewAllProjects: 'View All Projects',
+    backToHome: 'Back to home',
     
     // Contact Section
     contactTitle: "Let's Work Together",

@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ExternalLink, Github, Eye, X, Filter } from 'lucide-react'
+import { ExternalLink, Github, Eye, X, Filter, ArrowLeft } from 'lucide-react'
 import { Button } from './ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/Card'
 import { useLanguage } from '../contexts/LanguageContext'
 import StarField from './StarField'
 
-const Projects = () => {
+const Projects = ({ showViewAllButton = true, showTopBackButton = false }) => {
   const { t } = useLanguage()
   const [selectedProject, setSelectedProject] = useState(null)
   const [activeFilter, setActiveFilter] = useState('all')
@@ -32,7 +32,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Análise de Salários na Área de Dados - Imersão Alura',
+      title: 'An��lise de Salários na Área de Dados - Imersão Alura',
       shortDescription: 'Análise detalhada dos salários em Data Science, com recortes por senioridade, contrato, país, remoto e variações anuais; inclui dashboard interativo.',
       fullDescription: 'Estudo abrangente da estrutura salarial na área de dados. Explorei níveis de experiência, tipos de vínculo e cargos, normalizei remunerações, comparei remuneração por país e modalidade de trabalho (remoto/hib/onsite) e observei tendências temporais. O projeto também inclui um dashboard no Streamlit para exploração interativa e geração rápida de insights por recrutadores e profissionais.',
       image: '/assets/img/Análsie dos setores.jpg',
@@ -102,12 +102,33 @@ const Projects = () => {
     }
   }
 
+  const renderTitle = () => {
+    const title = t('projectsTitle') || ''
+    const words = title.trim().split(' ')
+    if (words.length === 0) return null
+    const last = words.pop()
+    const prefix = words.join(' ')
+    return (
+      <>
+        {prefix && <span>{prefix} </span>}
+        <span className="text-primary">{last}</span>
+      </>
+    )
+  }
+
   return (
     <section id="projects" className="section-padding relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
       <StarField count={100} />
       <div className="container-max relative z-10">
+        {showTopBackButton && (
+          <div className="mb-6 flex justify-center">
+            <Button variant="link" size="sm" onClick={() => { window.location.href = '/' }} className="text-muted-foreground hover:text-primary">
+              {t('backToHome')}
+            </Button>
+          </div>
+        )}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -117,9 +138,9 @@ const Projects = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight"
           >
-            {t('projectsTitle')}
+            {renderTitle()}
           </motion.h2>
           <motion.p
             variants={itemVariants}
@@ -249,17 +270,19 @@ const Projects = () => {
         </motion.div>
 
         {/* View All Projects Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <Button variant="outline" size="lg" onClick={() => { window.location.href = 'projetos.html' }}>
-            {t('viewAllProjects')}
-            <ExternalLink className="w-4 h-4" />
-          </Button>
-        </motion.div>
+        {showViewAllButton && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Button variant="outline" size="lg" onClick={() => { window.location.href = 'projetos.html' }}>
+              {t('viewAllProjects')}
+              <ExternalLink className="w-4 h-4" />
+            </Button>
+          </motion.div>
+        )}
       </div>
 
       {/* Project Modal */}

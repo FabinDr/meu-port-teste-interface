@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/Card'
 import { useLanguage } from '../contexts/LanguageContext'
 import StarField from './StarField'
 
-const Projects = () => {
+const Projects = ({ showViewAllButton = true }) => {
   const { t } = useLanguage()
   const [selectedProject, setSelectedProject] = useState(null)
   const [activeFilter, setActiveFilter] = useState('all')
@@ -249,17 +249,19 @@ const Projects = () => {
         </motion.div>
 
         {/* View All Projects Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <Button variant="outline" size="lg" onClick={() => { window.location.href = 'projetos.html' }}>
-            {t('viewAllProjects')}
-            <ExternalLink className="w-4 h-4" />
-          </Button>
-        </motion.div>
+        {showViewAllButton && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Button variant="outline" size="lg" onClick={() => { window.location.href = 'projetos.html' }}>
+              {t('viewAllProjects')}
+              <ExternalLink className="w-4 h-4" />
+            </Button>
+          </motion.div>
+        )}
       </div>
 
       {/* Project Modal */}

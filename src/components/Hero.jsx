@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Github, Linkedin, Mail, ChevronDown } from 'lucide-react'
+import { ArrowRight, Github, Linkedin, Mail, ChevronDown, Code2, Database, FileText } from 'lucide-react'
 import { Button } from './ui/Button'
 import { useLanguage } from '../contexts/LanguageContext'
 import StarField from './StarField'
@@ -77,6 +77,7 @@ const Hero = () => {
       {/* Background Pattern + Starfield */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+      <div className="absolute inset-0 bg-black/50" />
       {/* Stars */}
       <StarField count={120} />
 
@@ -212,9 +213,7 @@ const Hero = () => {
                 }}
                 className="absolute top-9 left-[300px] w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
-                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
+                <Code2 className="w-7 h-7" />
               </motion.div>
 
               <motion.div
@@ -228,9 +227,7 @@ const Hero = () => {
                 }}
                 className="absolute -bottom-6 -left-6 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
-                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-                </svg>
+                <FileText className="w-7 h-7" />
               </motion.div>
 
               <motion.div
@@ -246,9 +243,7 @@ const Hero = () => {
                 }}
                 className="absolute top-1/2 -right-10 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
+                <Database className="w-6 h-6" />
               </motion.div>
 
               {/* Glow Effect */}

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Menu, X, Sun, Moon, Globe } from 'lucide-react'
+import { Menu, X, Sun, Moon, Globe, ArrowLeft } from 'lucide-react'
 import { Button } from './ui/Button'
 import { useTheme } from '../contexts/ThemeContext'
 import { useLanguage } from '../contexts/LanguageContext'
 
-const Header = () => {
+const Header = ({ backOnly = false }) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
@@ -64,43 +64,56 @@ const Header = () => {
             </span>
           </motion.div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item, index) => (
-              <motion.button
-                key={item.href}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                onClick={() => scrollToSection(item.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative group"
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/70 transition-all duration-300 group-hover:w-full" />
-              </motion.button>
-            ))}
-          </nav>
+          {/* Navigation or Back Button */}
+          {backOnly ? (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => { window.location.href = '/' }}
+              className="flex items-center gap-2"
+            >
+              <ArrowLeft className="w-4 h-4" /> {t('backToHome')}
+            </Button>
+          ) : (
+            <nav className="hidden md:flex items-center gap-8">
+              {navItems.map((item, index) => (
+                <motion.button
+                  key={item.href}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative group"
+                >
+                  {item.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/70 transition-all duration-300 group-hover:w-full" />
+                </motion.button>
+              ))}
+            </nav>
+          )}
 
           {/* Only mobile menu button (theme/lang moved to side controls) */}
-          <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden"
-              aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
-            >
-              {isMobileMenuOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
-            </Button>
-          </div>
+          {!backOnly && (
+            <div className="flex items-center gap-2">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="md:hidden"
+                aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+              >
+                {isMobileMenuOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
+                )}
+              </Button>
+            </div>
+          )}
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
+        {!backOnly && isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
@@ -120,7 +133,7 @@ const Header = () => {
                   {item.label}
                 </motion.button>
               ))}
-              
+
             </nav>
           </motion.div>
         )}

@@ -28,4 +28,12 @@ export default defineConfig({
     port: 3000,
     host: true,
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        projetos: path.resolve(__dirname, 'projetos.html'),
+      },
+    },
+  },
 })

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Github, Linkedin, Mail, ChevronDown, Code2, Database, FileText } from 'lucide-react'
+import { ArrowRight, Github, Linkedin, Mail, ChevronDown, Database, Brain, BarChart3 } from 'lucide-react'
 import { Button } from './ui/Button'
 import { useLanguage } from '../contexts/LanguageContext'
 import StarField from './StarField'
@@ -77,7 +77,7 @@ const Hero = () => {
       {/* Background Pattern + Starfield */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/60" />
       {/* Stars */}
       <StarField count={120} />
 
@@ -213,7 +213,7 @@ const Hero = () => {
                 }}
                 className="absolute top-9 left-[300px] w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
-                <Code2 className="w-7 h-7" />
+                <Database className="w-7 h-7" />
               </motion.div>
 
               <motion.div
@@ -227,7 +227,7 @@ const Hero = () => {
                 }}
                 className="absolute -bottom-6 -left-6 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
-                <FileText className="w-7 h-7" />
+                <BarChart3 className="w-7 h-7" />
               </motion.div>
 
               <motion.div
@@ -243,7 +243,7 @@ const Hero = () => {
                 }}
                 className="absolute top-1/2 -right-10 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
-                <Database className="w-6 h-6" />
+                <Brain className="w-6 h-6" />
               </motion.div>
 
               {/* Glow Effect */}

@@ -11,10 +11,10 @@ const ProjectsPage = () => {
     <ThemeProvider>
       <LanguageProvider>
         <div className="min-h-screen bg-background text-foreground">
-          <Header />
+          <Header backOnly />
           <SideControls />
           <main className="pt-24">
-            <Projects showViewAllButton={false} />
+            <Projects showViewAllButton={false} showTopBackButton />
           </main>
           <Footer />
         </div>

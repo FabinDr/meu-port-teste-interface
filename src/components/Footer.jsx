@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail } from 'lucide-react'
 import { useLanguage } from '../contexts/LanguageContext'
+import logo from '../../assets/img/logo-02.svg'
 
 const Footer = () => {
   const { t } = useLanguage()
@@ -61,9 +62,9 @@ const Footer = () => {
                 viewport={{ once: true }}
                 className="flex items-center gap-2 mb-4"
               >
-                <img 
-                  src="/assets/img/logo-02.svg" 
-                  alt="Logo" 
+                <img
+                  src={logo}
+                  alt="Logo"
                   className="w-10 h-10"
                 />
                 <span className="text-xl font-bold">

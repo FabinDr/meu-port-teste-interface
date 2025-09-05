@@ -35,7 +35,7 @@ const Projects = ({ showViewAllButton = true, showTopBackButton = false }) => {
       title: 'An��lise de Salários na Área de Dados - Imersão Alura',
       shortDescription: 'Análise detalhada dos salários em Data Science, com recortes por senioridade, contrato, país, remoto e variações anuais; inclui dashboard interativo.',
       fullDescription: 'Estudo abrangente da estrutura salarial na área de dados. Explorei níveis de experiência, tipos de vínculo e cargos, normalizei remunerações, comparei remuneração por país e modalidade de trabalho (remoto/hib/onsite) e observei tendências temporais. O projeto também inclui um dashboard no Streamlit para exploração interativa e geração rápida de insights por recrutadores e profissionais.',
-      image: '/assets/img/Análsie dos setores.jpg',
+      image: '/assets/img/analise-dos-setores.jpg',
       category: 'data-analysis',
       technologies: ['Python', 'Pandas', 'Matplotlib', 'NumPy', 'Streamlit'],
       liveUrl: 'https://dashboard-salarios-naarea-de-dados.streamlit.app/',

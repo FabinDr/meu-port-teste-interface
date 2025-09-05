@@ -4,7 +4,7 @@ const urlsToCache = [
   '/style.css',
   '/script.js',
   '/logo.svg',
-  '/assets/img/perfil-img.png',
+  '/assets/img/img-perfil.png',
   '/assets/img/analise-dos-setores.jpg',
   'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css',
   'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'

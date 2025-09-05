@@ -51,7 +51,7 @@ const ExperienceEducation = () => {
         'Transformação de dados em insights e criação de visualizações',
         'Criação de pipelines de dados e estruturação de análises consistentes'
       ],
-      skills: ['Python', 'Pandas', 'NumPy', 'Excel', 'Análise Estat��stica', 'Séries Temporais']
+      skills: ['Python', 'Pandas', 'NumPy', 'Excel', 'Análise Estatística', 'Séries Temporais']
     },
     {
       id: 2,

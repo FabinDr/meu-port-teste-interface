@@ -62,21 +62,21 @@ const About = () => {
           >
             <motion.p
               variants={itemVariants}
-              className="text-lg font-semibold text-foreground"
+              className="text-lg font-semibold text-foreground text-justify"
             >
               {t('aboutIntro')}
             </motion.p>
 
             <motion.p
               variants={itemVariants}
-              className="text-muted-foreground leading-relaxed"
+              className="text-muted-foreground leading-relaxed text-justify"
             >
               {t('aboutText1')}
             </motion.p>
 
             <motion.p
               variants={itemVariants}
-              className="text-muted-foreground leading-relaxed"
+              className="text-muted-foreground leading-relaxed text-justify"
             >
               {t('aboutText2')}
             </motion.p>

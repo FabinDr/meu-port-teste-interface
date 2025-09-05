@@ -107,7 +107,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="order-1 lg:order-2 flex justify-center items-center"
+            className="order-1 lg:order-2 justify-self-center flex justify-center items-center"
           >
             <div className="relative mx-auto">
               <div className="w-[320px] h-[320px] rounded-xl overflow-hidden border-2 border-border bg-secondary/40 flex items-center justify-center mx-auto">

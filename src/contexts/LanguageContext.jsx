@@ -75,6 +75,14 @@ const translations = {
     navigation: 'Navegação',
     footerDescription: 'Analista de dados especializado em transformar informações complexas em insights estratégicos para impulsionar o crescimento dos negócios.',
     footerText: 'Todos os direitos reservados.',
+
+    // Projects UI
+    demo: 'Demo',
+    code: 'Código',
+    viewProject: 'Ver Projeto',
+    viewCode: 'Ver Código',
+    mainFeatures: 'Principais funcionalidades:',
+    technologiesUsed: 'Tecnologias utilizadas:',
   },
   en: {
     // Navigation
@@ -140,6 +148,14 @@ const translations = {
     navigation: 'Navigation',
     footerDescription: 'Data analyst specialized in transforming complex information into strategic insights to drive business growth.',
     footerText: 'All rights reserved.',
+
+    // Projects UI
+    demo: 'Demo',
+    code: 'Code',
+    viewProject: 'View Project',
+    viewCode: 'View Code',
+    mainFeatures: 'Main features:',
+    technologiesUsed: 'Technologies used:',
   }
 }
 

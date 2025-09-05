@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/Card'
 import { useLanguage } from '../contexts/LanguageContext'
 
 const ExperienceEducation = () => {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const listRef = useRef(null)
   const trackRef = useRef(null)
   const [progress, setProgress] = useState(0)
@@ -41,35 +41,26 @@ const ExperienceEducation = () => {
     {
       id: 1,
       icon: Database,
-      title: 'Bolsista - Análise de Dados',
-      company: 'JOVEM TECH - Pulse | Porto do Itaqui | Fapema',
-      period: 'Maio 2025 - Atual',
-      location: 'São Luís, Maranhão',
-      description: 'Atuo como bolsista com foco em Análise de Dados, desenvolvendo habilidades práticas em SQL (consultas simples e intermediárias), Excel, Python (Pandas e NumPy) e Power Bi.',
-      highlights: [
-        'Coleta, organização e análise de dados para apoiar decisões estratégicas',
-        'Transformação de dados em insights e criação de visualizações',
-        'Criação de pipelines de dados e estruturação de análises consistentes'
-      ],
-      skills: ['Python', 'Pandas', 'NumPy', 'Excel', 'Análise Estat��stica', 'Séries Temporais']
+      title: t('exp1Title'),
+      company: t('exp1Company'),
+      period: t('exp1Period'),
+      location: t('exp1Location'),
+      description: t('exp1Description'),
+      highlights: t('exp1Highlights') || [],
+      skills: t('exp1Skills') || []
     },
     {
       id: 2,
       icon: Code,
-      title: 'Bolsista Back-end - Programa Trilhas',
-      company: 'Inova Maranhão - SECTI-MA',
-      period: '2024',
-      location: 'São Luís, Maranhão',
-      description: 'Especialização em desenvolvimento Back-end com Node.js através do programa Trilhas.',
-      highlights: [
-        'Desenvolvimento de APIs RESTful com Node.js e Express',
-        'Integração com bancos de dados',
-        'Autenticação e autorização',
-        'Práticas ágeis e versionamento de código'
-      ],
-      skills: ['Node.js', 'JavaScript', 'APIs REST', 'Banco de Dados']
+      title: t('exp2Title'),
+      company: t('exp2Company'),
+      period: t('exp2Period'),
+      location: t('exp2Location'),
+      description: t('exp2Description'),
+      highlights: t('exp2Highlights') || [],
+      skills: t('exp2Skills') || []
     }
-  ]), [])
+  ]), [t, language])
 
   const container = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.15 } } }
   const item = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }
@@ -97,25 +88,18 @@ const ExperienceEducation = () => {
                         <GraduationCap className="w-6 h-6" />
                       </div>
                       <div className="flex-1">
-                        <CardTitle className="text-xl">Bacharelado Interdisciplinar em Ciência e Tecnologia</CardTitle>
+                        <CardTitle className="text-xl">{t('educationCourseTitle')}</CardTitle>
                         <div className="text-muted-foreground text-sm flex flex-wrap gap-3 mt-1">
-                          <span>Universidade Federal do Maranhão (UFMA)</span>
-                          <span className="flex items-center gap-1"><Calendar className="w-4 h-4" />2023 - Presente | Cursando</span>
+                          <span>{t('universityName')}</span>
+                          <span className="flex items-center gap-1"><Calendar className="w-4 h-4" />{t('educationPeriod')}</span>
                         </div>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="pt-4 px-6 pb-6">
-                    <h4 className="font-semibold mb-3">Conhecimentos e disciplinas:</h4>
+                    <h4 className="font-semibold mb-3">{t('knowledgeTitle')}</h4>
                     <ul className="space-y-2 text-muted-foreground">
-                      {[
-                        'Ciência de Dados: Análise estatística, Visualização de dados e Machine Learning',
-                        'Algoritmos e Programação: Fundamentos da Computação e Estruturas de Dados',
-                        'Matemática Aplicada: Álgebra Linear, Cálculo, Probabilidade e Estatística',
-                        'Engenharia de Software: Metodologias ágeis e arquitetura de sistemas',
-                        'Administração: Gestão de projetos, empreendedorismo e inovação',
-                        'Física e Química: Fundamentos científicos para aplicações tecnológicas'
-                      ].map((d) => (
+                      {(t('educationTopics') || []).map((d) => (
                         <li key={d} className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                           <span>{d}</span>
@@ -161,7 +145,7 @@ const ExperienceEducation = () => {
                       <CardContent className="space-y-5">
                         <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
                         <div>
-                          <h4 className="font-semibold mb-2">Atividades:</h4>
+                          <h4 className="font-semibold mb-2">{t('activitiesLabel')}</h4>
                           <ul className="space-y-2">
                             {exp.highlights.map((h) => (
                               <li key={h} className="flex items-start gap-2 text-muted-foreground">
@@ -172,7 +156,7 @@ const ExperienceEducation = () => {
                           </ul>
                         </div>
                         <div>
-                          <h4 className="font-semibold mb-2">Tecnologias:</h4>
+                          <h4 className="font-semibold mb-2">{t('technologiesLabel')}</h4>
                           <div className="flex flex-wrap gap-2">
                             {exp.skills.map((s, i) => (
                               <motion.span

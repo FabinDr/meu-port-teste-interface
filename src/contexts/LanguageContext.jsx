@@ -42,6 +42,47 @@ const translations = {
 
     // Experience Section
     experienceTitle: 'Experiência Profissional',
+
+    // Experience & Education details
+    educationCourseTitle: 'Bacharelado Interdisciplinar em Ciência e Tecnologia',
+    universityName: 'Universidade Federal do Maranhão (UFMA)',
+    educationPeriod: '2023 - Presente | Cursando',
+    knowledgeTitle: 'Conhecimentos e disciplinas:',
+    educationTopics: [
+      'Ciência de Dados: Análise estatística, Visualização de dados e Machine Learning',
+      'Algoritmos e Programação: Fundamentos da Computação e Estruturas de Dados',
+      'Matemática Aplicada: Álgebra Linear, Cálculo, Probabilidade e Estatística',
+      'Engenharia de Software: Metodologias ágeis e arquitetura de sistemas',
+      'Administração: Gestão de projetos, empreendedorismo e inovação',
+      'Física e Química: Fundamentos científicos para aplicações tecnológicas'
+    ],
+    activitiesLabel: 'Atividades:',
+    technologiesLabel: 'Tecnologias:',
+
+    exp1Title: 'Bolsista - Análise de Dados',
+    exp1Company: 'JOVEM TECH - Pulse | Porto do Itaqui | Fapema',
+    exp1Period: 'Maio 2025 - Atual',
+    exp1Location: 'São Luís, Maranhão',
+    exp1Description: 'Atuo como bolsista com foco em Análise de Dados, desenvolvendo habilidades práticas em SQL (consultas simples e intermediárias), Excel, Python (Pandas e NumPy) e Power BI.',
+    exp1Highlights: [
+      'Coleta, organização e análise de dados para apoiar decisões estratégicas',
+      'Transformação de dados em insights e criação de visualizações',
+      'Criação de pipelines de dados e estruturação de análises consistentes'
+    ],
+    exp1Skills: ['Python', 'Pandas', 'NumPy', 'Excel', 'Análise Estatística', 'Séries Temporais'],
+
+    exp2Title: 'Bolsista Back-end - Programa Trilhas',
+    exp2Company: 'Inova Maranhão - SECTI-MA',
+    exp2Period: '2024',
+    exp2Location: 'São Luís, Maranhão',
+    exp2Description: 'Especialização em desenvolvimento Back-end com Node.js através do programa Trilhas.',
+    exp2Highlights: [
+      'Desenvolvimento de APIs RESTful com Node.js e Express',
+      'Integração com bancos de dados',
+      'Autenticação e autorização',
+      'Práticas ágeis e versionamento de código'
+    ],
+    exp2Skills: ['Node.js', 'JavaScript', 'APIs REST', 'Banco de Dados'],
     
     // Skills Section
     skillsTitle: 'Minhas Habilidades',
@@ -75,6 +116,48 @@ const translations = {
     navigation: 'Navegação',
     footerDescription: 'Analista de dados especializado em transformar informações complexas em insights estratégicos para impulsionar o crescimento dos negócios.',
     footerText: 'Todos os direitos reservados.',
+
+    // Projects UI
+    demo: 'Demo',
+    code: 'Código',
+    viewProject: 'Ver Projeto',
+    viewCode: 'Ver Código',
+    mainFeatures: 'Principais funcionalidades:',
+    technologiesUsed: 'Tecnologias utilizadas:',
+
+    // Projects content
+    project1Title: 'Análise dos Unicórnios 2022 — Setores, Países e Investidores',
+    project1Short: 'Estudo aprofundado das empresas que atingiram o status de unicórnio em 2022, com análise setorial, geográfica e de investidores, conectando dados e contexto de mercado.',
+    project1Full: 'Projeto de análise completa das empresas que se tornaram unicórnios em 2022. Mapeei setores de atuação, países de origem, principais rodadas e investidores, identificando padrões de crescimento e correlações entre região, estágio e volume de investimento. A pesquisa consolida insights sobre o ecossistema de inovação global, tendências responsáveis pelo crescimento acelerado e características compartilhadas por empresas de alto desempenho, culminando em recomendações práticas para stakeholders.',
+    project1Features: [
+      'Análise exploratória e limpeza de dados (EDA) com documentação',
+      'Visualizações de setores, países e estágios de investimento',
+      'Clusterização de empresas por perfil de investimento',
+      'Insights sobre tendências e concentração de capital',
+      'Relatório executivo com recomendações acionáveis'
+    ],
+
+    project2Title: 'Análise de Salários na Área de Dados - Imersão Alura',
+    project2Short: 'Análise detalhada dos salários em Data Science, com recortes por senioridade, contrato, país, remoto e variações anuais; inclui dashboard interativo.',
+    project2Full: 'Estudo abrangente da estrutura salarial na área de dados. Explorei níveis de experiência, tipos de vínculo e cargos, normalizei remunerações, comparei remuneração por país e modalidade de trabalho (remoto/hib/onsite) e observei tendências temporais. O projeto também inclui um dashboard no Streamlit para exploração interativa e geração rápida de insights por recrutadores e profissionais.',
+    project2Features: [
+      'Dashboard interativo com navegação por filtros',
+      'Comparativos por região, senioridade e modalidade',
+      'Tendências salariais anualizadas',
+      'Conversão e padronização monetária',
+      'Insights práticos para carreira e recrutamento'
+    ],
+
+    project3Title: 'Modelo de previsão em vendas - Jovem Tech',
+    project3Short: 'Análise e modelagem de dados de vendas no varejo com foco em previsões e suporte à decisão; inclui dados reais e sintéticos.',
+    project3Full: 'Trabalho realizado no programa Jovem Tech com foco em varejo. Partindo de dados reais, executei limpeza, padronização e enriquecimento, conduzi análises estatísticas (Pandas/NumPy) e gerei dados sintéticos para testes controlados. Estruturei o código em classes reutilizáveis, seguindo boas práticas de modularização e versionamento. O resultado foi um conjunto de insights acionáveis e hipóteses de previsão para aumento de receita e otimização de estoque.',
+    project3Features: [
+      'Limpeza, normalização e enriquecimento de dados',
+      'Análise estatística e hipóteses de previsão',
+      'Geração de dados sintéticos para simulações',
+      'Arquitetura modular orientada a classes',
+      'Recomendações estratégicas para varejo'
+    ],
   },
   en: {
     // Navigation
@@ -107,6 +190,47 @@ const translations = {
 
     // Experience Section
     experienceTitle: 'Professional Experience',
+
+    // Experience & Education details
+    educationCourseTitle: "Interdisciplinary Bachelor's in Science and Technology",
+    universityName: 'Federal University of Maranhão (UFMA)',
+    educationPeriod: '2023 - Present | Ongoing',
+    knowledgeTitle: 'Knowledge and disciplines:',
+    educationTopics: [
+      'Data Science: Statistical analysis, Data visualization and Machine Learning',
+      'Algorithms and Programming: Computer Science fundamentals and Data Structures',
+      'Applied Mathematics: Linear Algebra, Calculus, Probability and Statistics',
+      'Software Engineering: Agile methodologies and systems architecture',
+      'Business Administration: Project management, entrepreneurship and innovation',
+      'Physics and Chemistry: Scientific foundations for technological applications'
+    ],
+    activitiesLabel: 'Activities:',
+    technologiesLabel: 'Technologies:',
+
+    exp1Title: 'Research Fellow - Data Analysis',
+    exp1Company: 'JOVEM TECH - Pulse | Porto do Itaqui | Fapema',
+    exp1Period: 'May 2025 - Present',
+    exp1Location: 'São Luís, Maranhão',
+    exp1Description: 'I work as a research fellow focused on Data Analysis, developing practical skills in SQL (basic and intermediate queries), Excel, Python (Pandas and NumPy) and Power BI.',
+    exp1Highlights: [
+      'Data collection, organization and analysis to support strategic decisions',
+      'Transforming data into insights and creating visualizations',
+      'Building data pipelines and structuring consistent analyses'
+    ],
+    exp1Skills: ['Python', 'Pandas', 'NumPy', 'Excel', 'Statistical Analysis', 'Time Series'],
+
+    exp2Title: 'Back-end Fellow - Trilhas Program',
+    exp2Company: 'Inova Maranhão - SECTI-MA',
+    exp2Period: '2024',
+    exp2Location: 'São Luís, Maranhão',
+    exp2Description: 'Specialization in Back-end development with Node.js through the Trilhas program.',
+    exp2Highlights: [
+      'Development of RESTful APIs with Node.js and Express',
+      'Database integration',
+      'Authentication and authorization',
+      'Agile practices and version control'
+    ],
+    exp2Skills: ['Node.js', 'JavaScript', 'REST APIs', 'Databases'],
     
     // Skills Section
     skillsTitle: 'My Skills',
@@ -140,6 +264,48 @@ const translations = {
     navigation: 'Navigation',
     footerDescription: 'Data analyst specialized in transforming complex information into strategic insights to drive business growth.',
     footerText: 'All rights reserved.',
+
+    // Projects UI
+    demo: 'Demo',
+    code: 'Code',
+    viewProject: 'View Project',
+    viewCode: 'View Code',
+    mainFeatures: 'Main features:',
+    technologiesUsed: 'Technologies used:',
+
+    // Projects content
+    project1Title: 'Unicorn Analysis 2022 — Sectors, Countries and Investors',
+    project1Short: 'In-depth study of companies that reached unicorn status in 2022, analyzing sectors, geography and investors, connecting data with market context.',
+    project1Full: 'Comprehensive analysis of companies that became unicorns in 2022. I mapped sectors, countries of origin, main rounds and investors, identifying growth patterns and correlations between region, stage and investment volume. The research consolidates insights into the global innovation ecosystem, trends behind accelerated growth and common traits among high-performing companies, culminating in practical recommendations for stakeholders.',
+    project1Features: [
+      'Exploratory data analysis (EDA) and cleaning with documentation',
+      'Visualizations of sectors, countries and investment stages',
+      'Clustering of companies by investment profile',
+      'Insights on trends and capital concentration',
+      'Executive report with actionable recommendations'
+    ],
+
+    project2Title: 'Salaries in Data — Alura Immersion',
+    project2Short: 'Detailed analysis of Data Science salaries by seniority, contract type, country, remote mode and annual trends; includes interactive dashboard.',
+    project2Full: 'Comprehensive study of salary structure in the data field. I explored experience levels, employment types and roles, normalized pay, compared by country and work mode (remote/hybrid/onsite) and looked at time trends. The project also includes a Streamlit dashboard for interactive exploration and quick insights for recruiters and professionals.',
+    project2Features: [
+      'Interactive dashboard with filter navigation',
+      'Comparatives by region, seniority and modality',
+      'Annual salary trends',
+      'Currency conversion and standardization',
+      'Practical insights for careers and recruiting'
+    ],
+
+    project3Title: 'Sales Forecasting Model — Jovem Tech',
+    project3Short: 'Retail sales data analysis and modeling focused on forecasting and decision support; includes real and synthetic data.',
+    project3Full: 'Work carried out in the Jovem Tech program focused on retail. Starting from real data, I performed cleaning, standardization and enrichment, conducted statistical analyses (Pandas/NumPy) and generated synthetic data for controlled tests. I structured the code in reusable classes, following best practices of modularization and versioning. The result was a set of actionable insights and forecasting hypotheses to increase revenue and optimize inventory.',
+    project3Features: [
+      'Data cleaning, normalization and enrichment',
+      'Statistical analysis and forecasting hypotheses',
+      'Synthetic data generation for simulations',
+      'Modular, class-oriented architecture',
+      'Strategic recommendations for retail'
+    ],
   }
 }
 

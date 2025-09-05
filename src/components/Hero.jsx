@@ -77,7 +77,7 @@ const Hero = () => {
       {/* Background Pattern + Starfield */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 dark:bg-black/60" />
       {/* Stars */}
       <StarField count={120} />
 
@@ -241,7 +241,7 @@ const Hero = () => {
                   ease: "easeInOut",
                   delay: 0.5
                 }}
-                className="absolute top-1/2 -right-10 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
+                className="absolute top-1/2 -right-12 md:-right-16 lg:-right-20 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
                 <Brain className="w-6 h-6" />
               </motion.div>

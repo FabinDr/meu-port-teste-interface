@@ -77,7 +77,7 @@ const Hero = () => {
       {/* Background Pattern + Starfield */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 dark:bg-black/60" />
       {/* Stars */}
       <StarField count={120} />
 

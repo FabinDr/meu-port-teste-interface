@@ -42,6 +42,47 @@ const translations = {
 
     // Experience Section
     experienceTitle: 'Experiência Profissional',
+
+    // Experience & Education details
+    educationCourseTitle: 'Bacharelado Interdisciplinar em Ciência e Tecnologia',
+    universityName: 'Universidade Federal do Maranhão (UFMA)',
+    educationPeriod: '2023 - Presente | Cursando',
+    knowledgeTitle: 'Conhecimentos e disciplinas:',
+    educationTopics: [
+      'Ciência de Dados: Análise estatística, Visualização de dados e Machine Learning',
+      'Algoritmos e Programação: Fundamentos da Computação e Estruturas de Dados',
+      'Matemática Aplicada: Álgebra Linear, Cálculo, Probabilidade e Estatística',
+      'Engenharia de Software: Metodologias ágeis e arquitetura de sistemas',
+      'Administração: Gestão de projetos, empreendedorismo e inovação',
+      'Física e Química: Fundamentos científicos para aplicações tecnológicas'
+    ],
+    activitiesLabel: 'Atividades:',
+    technologiesLabel: 'Tecnologias:',
+
+    exp1Title: 'Bolsista - Análise de Dados',
+    exp1Company: 'JOVEM TECH - Pulse | Porto do Itaqui | Fapema',
+    exp1Period: 'Maio 2025 - Atual',
+    exp1Location: 'São Luís, Maranhão',
+    exp1Description: 'Atuo como bolsista com foco em Análise de Dados, desenvolvendo habilidades práticas em SQL (consultas simples e intermediárias), Excel, Python (Pandas e NumPy) e Power BI.',
+    exp1Highlights: [
+      'Coleta, organização e análise de dados para apoiar decisões estratégicas',
+      'Transformação de dados em insights e criação de visualizações',
+      'Criação de pipelines de dados e estruturação de análises consistentes'
+    ],
+    exp1Skills: ['Python', 'Pandas', 'NumPy', 'Excel', 'Análise Estatística', 'Séries Temporais'],
+
+    exp2Title: 'Bolsista Back-end - Programa Trilhas',
+    exp2Company: 'Inova Maranhão - SECTI-MA',
+    exp2Period: '2024',
+    exp2Location: 'São Luís, Maranhão',
+    exp2Description: 'Especialização em desenvolvimento Back-end com Node.js através do programa Trilhas.',
+    exp2Highlights: [
+      'Desenvolvimento de APIs RESTful com Node.js e Express',
+      'Integração com bancos de dados',
+      'Autenticação e autorização',
+      'Práticas ágeis e versionamento de código'
+    ],
+    exp2Skills: ['Node.js', 'JavaScript', 'APIs REST', 'Banco de Dados'],
     
     // Skills Section
     skillsTitle: 'Minhas Habilidades',
@@ -115,6 +156,47 @@ const translations = {
 
     // Experience Section
     experienceTitle: 'Professional Experience',
+
+    // Experience & Education details
+    educationCourseTitle: "Interdisciplinary Bachelor's in Science and Technology",
+    universityName: 'Federal University of Maranhão (UFMA)',
+    educationPeriod: '2023 - Present | Ongoing',
+    knowledgeTitle: 'Knowledge and disciplines:',
+    educationTopics: [
+      'Data Science: Statistical analysis, Data visualization and Machine Learning',
+      'Algorithms and Programming: Computer Science fundamentals and Data Structures',
+      'Applied Mathematics: Linear Algebra, Calculus, Probability and Statistics',
+      'Software Engineering: Agile methodologies and systems architecture',
+      'Business Administration: Project management, entrepreneurship and innovation',
+      'Physics and Chemistry: Scientific foundations for technological applications'
+    ],
+    activitiesLabel: 'Activities:',
+    technologiesLabel: 'Technologies:',
+
+    exp1Title: 'Research Fellow - Data Analysis',
+    exp1Company: 'JOVEM TECH - Pulse | Porto do Itaqui | Fapema',
+    exp1Period: 'May 2025 - Present',
+    exp1Location: 'São Luís, Maranhão',
+    exp1Description: 'I work as a research fellow focused on Data Analysis, developing practical skills in SQL (basic and intermediate queries), Excel, Python (Pandas and NumPy) and Power BI.',
+    exp1Highlights: [
+      'Data collection, organization and analysis to support strategic decisions',
+      'Transforming data into insights and creating visualizations',
+      'Building data pipelines and structuring consistent analyses'
+    ],
+    exp1Skills: ['Python', 'Pandas', 'NumPy', 'Excel', 'Statistical Analysis', 'Time Series'],
+
+    exp2Title: 'Back-end Fellow - Trilhas Program',
+    exp2Company: 'Inova Maranhão - SECTI-MA',
+    exp2Period: '2024',
+    exp2Location: 'São Luís, Maranhão',
+    exp2Description: 'Specialization in Back-end development with Node.js through the Trilhas program.',
+    exp2Highlights: [
+      'Development of RESTful APIs with Node.js and Express',
+      'Database integration',
+      'Authentication and authorization',
+      'Agile practices and version control'
+    ],
+    exp2Skills: ['Node.js', 'JavaScript', 'REST APIs', 'Databases'],
     
     // Skills Section
     skillsTitle: 'My Skills',

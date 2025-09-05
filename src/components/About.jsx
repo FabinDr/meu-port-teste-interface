@@ -58,7 +58,7 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={containerVariants}
-            className="space-y-6 text-left"
+            className="order-2 lg:order-1 space-y-6 text-left"
           >
             <motion.p
               variants={itemVariants}
@@ -107,10 +107,10 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center"
+            className="order-1 lg:order-2 flex justify-center items-center"
           >
-            <div className="relative">
-              <div className="w-[320px] h-[320px] rounded-xl overflow-hidden border-2 border-border bg-secondary/40 flex items-center justify-center">
+            <div className="relative mx-auto">
+              <div className="w-[320px] h-[320px] rounded-xl overflow-hidden border-2 border-border bg-secondary/40 flex items-center justify-center mx-auto">
                 <img src="/assets/img/img-perfil.png" alt="Foto Fabio" className="w-full h-full object-cover my-auto" />
               </div>
             </div>

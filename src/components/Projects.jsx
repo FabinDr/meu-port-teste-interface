@@ -32,7 +32,7 @@ const Projects = ({ showViewAllButton = true, showTopBackButton = false }) => {
     },
     {
       id: 2,
-      title: 'An��lise de Salários na Área de Dados - Imersão Alura',
+      title: 'Análise de Salários na Área de Dados - Imersão Alura',
       shortDescription: 'Análise detalhada dos salários em Data Science, com recortes por senioridade, contrato, país, remoto e variações anuais; inclui dashboard interativo.',
       fullDescription: 'Estudo abrangente da estrutura salarial na área de dados. Explorei níveis de experiência, tipos de vínculo e cargos, normalizei remunerações, comparei remuneração por país e modalidade de trabalho (remoto/hib/onsite) e observei tendências temporais. O projeto também inclui um dashboard no Streamlit para exploração interativa e geração rápida de insights por recrutadores e profissionais.',
       image: '/assets/img/analise-dos-setores.jpg',
@@ -247,7 +247,7 @@ const Projects = ({ showViewAllButton = true, showTopBackButton = false }) => {
                         }}
                       >
                         <ExternalLink className="w-4 h-4" />
-                        Demo
+                        {t('demo')}
                       </Button>
                       <Button
                         variant="ghost"
@@ -259,7 +259,7 @@ const Projects = ({ showViewAllButton = true, showTopBackButton = false }) => {
                         }}
                       >
                         <Github className="w-4 h-4" />
-                        Código
+                        {t('code')}
                       </Button>
                     </div>
                   </CardContent>
@@ -327,7 +327,7 @@ const Projects = ({ showViewAllButton = true, showTopBackButton = false }) => {
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold mb-3">Principais funcionalidades:</h4>
+                  <h4 className="font-semibold mb-3">{t('mainFeatures')}</h4>
                   <ul className="space-y-2">
                     {selectedProject.features.map((feature, index) => (
                       <li key={index} className="flex items-start gap-3">
@@ -339,7 +339,7 @@ const Projects = ({ showViewAllButton = true, showTopBackButton = false }) => {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold mb-3">Tecnologias utilizadas:</h4>
+                  <h4 className="font-semibold mb-3">{t('technologiesUsed')}</h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.technologies.map((tech) => (
                       <span
@@ -358,14 +358,14 @@ const Projects = ({ showViewAllButton = true, showTopBackButton = false }) => {
                     onClick={() => window.open(selectedProject.liveUrl, '_blank')}
                   >
                     <ExternalLink className="w-4 h-4" />
-                    Ver Projeto
+                    {t('viewProject')}
                   </Button>
                   <Button
                     variant="outline"
                     onClick={() => window.open(selectedProject.codeUrl, '_blank')}
                   >
                     <Github className="w-4 h-4" />
-                    Ver Código
+                    {t('viewCode')}
                   </Button>
                 </div>
               </div>

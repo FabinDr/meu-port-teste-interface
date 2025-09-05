@@ -241,7 +241,7 @@ const Hero = () => {
                   ease: "easeInOut",
                   delay: 0.5
                 }}
-                className="absolute top-1/2 -right-16 md:-right-20 lg:-right-24 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
+                className="absolute top-1/2 -right-12 md:-right-16 lg:-right-20 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
                 <Brain className="w-6 h-6" />
               </motion.div>

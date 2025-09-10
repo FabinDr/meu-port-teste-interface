@@ -211,9 +211,15 @@ const Hero = () => {
                   rotate: { duration: 20, repeat: Infinity, ease: "linear" },
                   scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
                 }}
-                className="absolute top-9 left-[300px] w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
+                className="absolute top-9 left-[300px] w-14 h-14 bg-gradient-to-br from-primary/20 to-accent/20 ring-2 ring-primary rounded-full flex items-center justify-center text-primary overflow-hidden shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
-                <Database className="w-7 h-7" />
+                <motion.span
+                  aria-hidden
+                  className="absolute -inset-2 rounded-full bg-primary/30 blur-md"
+                  animate={{ scale: [1, 1.12, 1], opacity: [0.5, 0.8, 0.5] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <Database className="w-7 h-7 relative z-10" />
               </motion.div>
 
               <motion.div
@@ -225,9 +231,15 @@ const Hero = () => {
                   rotate: { duration: 15, repeat: Infinity, ease: "linear" },
                   y: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }
                 }}
-                className="absolute -bottom-6 -left-6 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
+                className="absolute -bottom-6 -left-6 w-14 h-14 bg-gradient-to-br from-primary/20 to-accent/20 ring-2 ring-primary rounded-full flex items-center justify-center text-primary overflow-hidden shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
-                <BarChart3 className="w-7 h-7" />
+                <motion.span
+                  aria-hidden
+                  className="absolute -inset-2 rounded-full bg-primary/30 blur-md"
+                  animate={{ scale: [1, 1.12, 1], opacity: [0.5, 0.8, 0.5] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <BarChart3 className="w-7 h-7 relative z-10" />
               </motion.div>
 
               <motion.div
@@ -241,9 +253,15 @@ const Hero = () => {
                   ease: "easeInOut",
                   delay: 0.5
                 }}
-                className="absolute top-1/2 -right-12 md:-right-16 lg:-right-20 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
+                className="absolute top-1/2 -right-12 md:-right-16 lg:-right-20 w-14 h-14 bg-gradient-to-br from-primary/20 to-accent/20 ring-2 ring-primary rounded-full flex items-center justify-center text-primary overflow-hidden shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
-                <Brain className="w-6 h-6" />
+                <motion.span
+                  aria-hidden
+                  className="absolute -inset-2 rounded-full bg-primary/30 blur-md"
+                  animate={{ scale: [1, 1.12, 1], opacity: [0.5, 0.8, 0.5] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <Brain className="w-6 h-6 relative z-10" />
               </motion.div>
 
               {/* Glow Effect */}

@@ -174,7 +174,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="order-1 lg:order-2 flex justify-center mt-16 lg:mt-0"
+            className="order-1 lg:order-2 flex justify-center mt-28 lg:mt-0"
           >
             <div className="relative">
               {/* Main Profile Image */}

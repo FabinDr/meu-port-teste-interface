@@ -94,7 +94,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-center lg:text-left"
             >
               Fabio{' '}
               <span className="gradient-text">Duarte</span>
@@ -104,7 +104,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-xl md:text-2xl font-semibold mb-6 h-8 flex items-center"
+              className="text-xl md:text-2xl font-semibold mb-6 h-8 flex items-center justify-center lg:justify-start text-center"
             >
               <span className="text-primary">{currentText}</span>
               <span className="animate-pulse text-primary ml-1">|</span>

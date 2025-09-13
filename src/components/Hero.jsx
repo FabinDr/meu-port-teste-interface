@@ -94,7 +94,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-center lg:text-left"
             >
               Fabio{' '}
               <span className="gradient-text">Duarte</span>
@@ -104,7 +104,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-xl md:text-2xl font-semibold mb-6 h-8 flex items-center"
+              className="text-xl md:text-2xl font-semibold mb-6 h-8 flex items-center justify-center lg:justify-start text-center"
             >
               <span className="text-primary">{currentText}</span>
               <span className="animate-pulse text-primary ml-1">|</span>
@@ -123,7 +123,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 mb-8"
+              className="flex flex-col sm:flex-row gap-4 mb-8 items-center justify-center lg:items-start lg:justify-start"
             >
               <Button
                 variant="gradient"
@@ -148,7 +148,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
-              className="flex gap-4"
+              className="flex gap-4 justify-center lg:justify-start"
             >
               {socialLinks.map((link, index) => {
                 const Icon = link.icon
@@ -174,7 +174,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="order-1 lg:order-2 flex justify-center"
+            className="order-1 lg:order-2 flex justify-center mt-28 lg:mt-0"
           >
             <div className="relative">
               {/* Main Profile Image */}
@@ -211,9 +211,15 @@ const Hero = () => {
                   rotate: { duration: 20, repeat: Infinity, ease: "linear" },
                   scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
                 }}
-                className="absolute top-9 left-[300px] w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
+                className="absolute top-9 left-[300px] w-14 h-14 bg-gradient-to-br from-primary/20 to-accent/20 ring-2 ring-primary rounded-full flex items-center justify-center text-primary overflow-hidden shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
-                <Database className="w-7 h-7" />
+                <motion.span
+                  aria-hidden
+                  className="absolute -inset-2 rounded-full bg-primary/30 blur-md"
+                  animate={{ scale: [1, 1.12, 1], opacity: [0.5, 0.8, 0.5] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <Database className="w-7 h-7 relative z-10" />
               </motion.div>
 
               <motion.div
@@ -225,9 +231,15 @@ const Hero = () => {
                   rotate: { duration: 15, repeat: Infinity, ease: "linear" },
                   y: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }
                 }}
-                className="absolute -bottom-6 -left-6 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
+                className="absolute -bottom-6 -left-6 w-14 h-14 bg-gradient-to-br from-primary/20 to-accent/20 ring-2 ring-primary rounded-full flex items-center justify-center text-primary overflow-hidden shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
-                <BarChart3 className="w-7 h-7" />
+                <motion.span
+                  aria-hidden
+                  className="absolute -inset-2 rounded-full bg-primary/30 blur-md"
+                  animate={{ scale: [1, 1.12, 1], opacity: [0.5, 0.8, 0.5] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <BarChart3 className="w-7 h-7 relative z-10" />
               </motion.div>
 
               <motion.div
@@ -241,9 +253,15 @@ const Hero = () => {
                   ease: "easeInOut",
                   delay: 0.5
                 }}
-                className="absolute top-1/2 -right-12 md:-right-16 lg:-right-20 w-14 h-14 bg-transparent ring-2 ring-primary rounded-full flex items-center justify-center text-primary shadow-[0_0_25px_rgba(0,212,255,0.35)]"
+                className="absolute top-1/2 -right-12 md:-right-16 lg:-right-20 w-14 h-14 bg-gradient-to-br from-primary/20 to-accent/20 ring-2 ring-primary rounded-full flex items-center justify-center text-primary overflow-hidden shadow-[0_0_25px_rgba(0,212,255,0.35)]"
               >
-                <Brain className="w-6 h-6" />
+                <motion.span
+                  aria-hidden
+                  className="absolute -inset-2 rounded-full bg-primary/30 blur-md"
+                  animate={{ scale: [1, 1.12, 1], opacity: [0.5, 0.8, 0.5] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <Brain className="w-6 h-6 relative z-10" />
               </motion.div>
 
               {/* Glow Effect */}
